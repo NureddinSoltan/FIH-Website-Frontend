@@ -1,0 +1,18 @@
+{
+  "devDependencies": {
+    "tailwindcss": "^3.4.10"
+  },
+  "name": "fih",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "tailwindcss": "^3.4.10"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "div": "npx tailwindcss -i ./src/styles.css -o ./dist/styles.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

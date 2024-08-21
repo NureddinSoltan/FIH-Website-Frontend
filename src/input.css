@@ -1,0 +1,172 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn-orange-rounded {
+    @apply bg-orange border-orange hover:bg-orange-dark rounded-full inline-flex items-center justify-center py-3 px-7 text-center text-base m-auto px-12 font-medium text-white  hover:border-orange;
+  }
+  .nav-link {
+    @apply block py-2 pl-3 pr-4 text-white rounded md:p-0;
+  }
+  .section-header {
+    @apply flex flex-col items-center justify-center text-center p-2;
+  }
+  .section-title {
+    @apply text-3xl font-bold text-black md:text-4xl md:font-extrabold;
+  }
+  .section-subtitle {
+    @apply text-lg font-normal mt-4 text-grey;
+  }
+  /* Our Services section */
+  .services-container {
+    @apply flex flex-col items-center justify-center gap-5 p-5 md:flex-row;
+  }
+  .services-card {
+    @apply flex flex-row items-center justify-center gap-3 px-5 py-3 md:flex-col text-center;
+  }
+  .service-icon-container {
+    @apply flex-shrink-0 p-2 rounded-md  max-w-16 max-h-16 overflow-hidden bg-orange-light;
+  }
+  .service-title {
+    @apply font-bold;
+  }
+  .service-subtitle {
+    @apply font-normal text-grey line-clamp-3;
+  }
+  /* Departments section */
+  .department-cards {
+    @apply grid grid-cols-1 gap-5 my-5 sm:grid-cols-2 lg:grid-cols-3 sm:px-8;
+  }
+
+  .department-card {
+    @apply flex flex-row items-center justify-center gap-3 md:gap-0 px-5 py-3 text-center bg-white  hover:bg-grey drop-shadow-xl rounded-lg md:flex-col md:p-5 md:min-h-64 md:max-w-sm;
+  }
+
+  .department-icon-container {
+    @apply flex-shrink-0 p-2 rounded-md max-w-16 max-h-16 md:max-w-32 md:max-h-32 overflow-hidden;
+  }
+
+  .department-title {
+    @apply font-bold text-start md:text-center md:text-2xl;
+  }
+
+  .department-subtitle {
+    @apply font-normal text-start text-grey line-clamp-3 md:pt-3 md:px-2 md:h-20 md:max-h-20;
+  }
+
+  /* doctors section */
+  .doctors-cards {
+    @apply grid grid-cols-2 gap-4 my-5 sm:grid-cols-4;
+  }
+  .doctor-card {
+    @apply bg-white rounded-lg max-w-36 drop-shadow-xl;
+  }
+  .doctor-image {
+    @apply p-2 m-auto rounded-md md:max-w-60 md:max-h-60;
+  }
+  .doctor-image img {
+    @apply object-cover w-full h-full rounded-xl;
+  }
+  .doctor-details {
+    @apply flex flex-col;
+  }
+  .doctor-details span {
+    @apply px-1 pt-2 text-xs font-bold line-clamp-1;
+  }
+  .doctor-details p {
+    @apply py-2 text-sm line-clamp-1 text-blue;
+  }
+
+  /* blog section */
+  .blog-cards {
+    @apply flex flex-col my-4 p-3 md:flex-row gap-5 max-h-32 md:max-h-[486px];
+  }
+  .blog-card {
+    @apply flex bg-white drop-shadow-xl md:flex-col md:max-w-64;
+  }
+  .blog-image {
+    @apply flex-shrink-0 max-h-32 max-w-32 md:max-h-[486px] md:max-w-sm rounded-r-lg  overflow-hidden;
+  }
+  .blog-image img {
+    @apply object-cover w-full h-full;
+  }
+  .blog-details {
+    @apply flex flex-col p-2 text-start;
+  }
+  .blog-details span {
+    @apply text-sm text-grey font-thin line-clamp-1;
+  }
+  .blog-details a {
+    @apply block text-sm mt-1 font-semibold leading-tight text-black line-clamp-2 hover:underline;
+  }
+
+  .blog-details p {
+    @apply mt-2 text-xs text-grey line-clamp-2 md:line-clamp-3;
+  }
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Nabvar */
+.menu {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  padding: 0;
+}
+.line {
+  fill: none;
+  stroke: #cf4132;
+  stroke-width: 6;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.line1 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+.line2 {
+  stroke-dasharray: 60 60;
+  stroke-width: 6;
+}
+.line3 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+.opened .line1 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+.opened .line2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: 6;
+}
+.opened .line3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+
+.mobile-menu {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s ease;
+}
+
+.mobile-menu.opened {
+  height: 521px;
+}
+
+section:nth-child(odd) {
+  background-color: #f8f6f6;
+}
