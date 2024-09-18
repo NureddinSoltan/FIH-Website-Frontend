@@ -15,6 +15,10 @@ module.exports = {
         '3.75xl' : '8px 7px 20px 0px rgba(0, 0, 0, 0.25)',
         'pagination-shadow' : '4.485px 4.485px 11.212px 0px rgba(0, 0, 0, 0.25)',
       },
+      screens: {
+        'xsm': { max: '350px' },
+        '3xl' : '1700px',
+      },
 
     },
   },

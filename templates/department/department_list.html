@@ -26,12 +26,17 @@
     <!-- Landing section: Introduction with background image and text -->
     <section
         class="landing m-0 flex h-[31vh] w-full items-center justify-center bg-[url('/assets/department/imgs/landing.png')] bg-cover bg-center p-0 shadow-4xl lg:h-[46vh]">
-        <div class="text flex flex-col items-center justify-center gap-4 text-center text-white">
+        <!-- DONE: Change the gap fpr latger screen -->
+        <div class="text flex flex-col items-center justify-center gap-4 lg:gap-6 text-center text-white">
             <h1 class="text-3xl font-bold md:text-5xl lg:text-7xl">Departments</h1>
-            <p class="text-lg md:text-2xl lg:text-3xl px-1">Experienced in multiple medical specialties</p>
+            <!-- DONE: make the font lighter for small screen -->
+            <p class="text-lg md:text-2xl lg:text-3xl font-light md:font-normal px-4">Experienced in multiple medical
+                specialties</p>
         </div>
     </section>
     <!-- End of Landing section -->
+
+    <!-- TODO: CONVER THE SEARCH ICON -->
 
     <!-- Searching section: This is searching box with searching button -->
     <section class="searching container mx-auto flex flex-col px-7 md:px-5">
@@ -39,7 +44,7 @@
             <div class="inbut_box relative mx-auto mt-7 flex w-full md:mx-0 md:w-5/12 lg:w-6/12">
                 <input
                     class="h-10 w-full rounded-lg border-2 bg-gray-50 px-3 pr-16 text-lg shadow-3xl transition focus:border-[#06F] focus:outline-none md:h-12 md:rounded-full"
-                    type="search" name="search" placeholder="Search By Speciality" />
+                    type="search" name="search" placeholder="Search By Specialty" />
                 <button type="submit" class="absolute right-2 top-2 mr-4 md:top-3">
                     <svg class="h-6 w-6 fill-current text-black" xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px"
@@ -55,7 +60,7 @@
                     class="mt-6 flex w-40 items-center justify-center rounded-lg bg-[#06F] p-2 text-lg text-white hover:bg-[#003E9A] md:rounded-full">Search</button>
             </div>
         </div>
-        <!-- TODO: Just for inspiration -->
+        <!-- COMMENT: Just for inspiration -->
         <!-- <div class="inbut_box mt-7 flex w-full relative bg-white p-1.5 rounded-lg  h-9">
         <input class="w-full" placeholder="Search By name" type="text" name="" id="" />
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -68,8 +73,10 @@
     <!-- End of Searching section -->
 
     <!-- Department section: This is the Department icon section -->
+    <!-- DONE: 4 cards on 17inch -->
+    <!-- DONE: 1 column on less than 350px -->
     <section
-        class="department-icon container mx-auto mt-7 grid grid-cols-2 grid-rows-6 gap-3 px-7 md:grid-cols-3 md:grid-rows-4 md:gap-5 md:px-5 2xl:grid-cols-4 2xl:grid-rows-3">
+        class="department-icon container mx-auto mt-7 grid grid-cols-2 grid-rows-6 gap-3 px-7 md:grid-cols-3 md:grid-rows-4 md:gap-5 md:px-5 3xl:grid-cols-4 3xl:grid-rows-3 xsm:grid-cols-1 xsm:grid-rows-1">
         <div
             class="card group flex flex-col items-center justify-center rounded-2xl bg-white p-3 shadow-3.5xl hover:bg-[#C1C1C1]">
             <img src="/assets/department/imgs/brain-icon.svg" alt="" class="w-[90px] pb-1.5" />
@@ -160,6 +167,7 @@
 
     <!-- Pagination Section -->
     <!-- <nav class="my-12 flex justify-center items-center -space-x-px shadow-pagination-shadow" aria-label="Pagination"> -->
+    <!-- TODO: CHANGE THE FONT SIZE WHEN HOVERING    -->
     <nav class="my-12 flex items-center justify-center" aria-label="Pagination">
         <div class="inline-flex rounded-lg shadow-pagination-shadow">
             <button type="button"

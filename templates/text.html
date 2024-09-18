@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/src/output.css" />
+    <style>
+        .card-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 50vh;
+            background-color: #f0f0f0;
+        }
+        .card {
+            width: 300px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .card-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .card-content {
+            padding: 16px;
+        }
+        .card-title {
+            font-size: 30px;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        .card-text {
+            font-size: 16px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <div class="card">
+            <img src="/imgs/article-2.jpg" alt="Card image" class="card-image">
+            <div class="card-content">
+                <h2 class="card-title">Card Title</h2>
+                <p class="card-text">This is a simple card design using HTML and CSS with flexbox.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex justify-center items-center h-screen bg-gray-100">
+        <div class="w-80 bg-white rounded-lg shadow-md overflow-hidden">
+            <img src="/imgs/article-2.jpg" alt="Card image" class="w-full h-52 object-cover">
+            <div class="p-4">
+                <h2 class="text-2xl text-gray-800 mb-2">Ibrahim</h2>
+                <p class="text-base text-gray-600">This is a simple card design using HTML with Tailwind CSS.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
