@@ -27,10 +27,10 @@
     <section
         class="landing m-0 flex h-[31vh] w-full items-center justify-center bg-[url('/assets/department/imgs/landing.png')] bg-cover bg-center p-0 shadow-4xl lg:h-[46vh]">
         <!-- DONE: Change the gap fpr latger screen -->
-        <div class="text flex flex-col items-center justify-center gap-4 lg:gap-6 text-center text-white">
+        <div class="text flex flex-col items-center justify-center gap-4 text-center text-white lg:gap-6">
             <h1 class="text-3xl font-bold md:text-5xl lg:text-7xl">Departments</h1>
             <!-- DONE: make the font lighter for small screen -->
-            <p class="text-lg md:text-2xl lg:text-3xl font-light md:font-normal px-4">Experienced in multiple medical
+            <p class="px-4 text-lg font-light md:text-2xl md:font-normal lg:text-3xl">Experienced in multiple medical
                 specialties</p>
         </div>
     </section>
@@ -76,7 +76,7 @@
     <!-- DONE: 4 cards on 17inch -->
     <!-- DONE: 1 column on less than 350px -->
     <section
-        class="department-icon container mx-auto mt-7 grid grid-cols-2 grid-rows-6 gap-3 px-7 md:grid-cols-3 md:grid-rows-4 md:gap-5 md:px-5 3xl:grid-cols-4 3xl:grid-rows-3 xsm:grid-cols-1 xsm:grid-rows-1">
+        class="department-icon container mx-auto mt-7 grid grid-cols-2 grid-rows-6 gap-3 px-7 md:grid-cols-3 md:grid-rows-4 md:gap-5 md:px-5 xsm:grid-cols-1 xsm:grid-rows-1 3xl:grid-cols-4 3xl:grid-rows-3">
         <div
             class="card group flex flex-col items-center justify-center rounded-2xl bg-white p-3 shadow-3.5xl hover:bg-[#C1C1C1]">
             <img src="/assets/department/imgs/brain-icon.svg" alt="" class="w-[90px] pb-1.5" />
@@ -185,16 +185,16 @@
             </button>
 
             <button type="button"
-                class="flex min-h-[38px] min-w-[38px] items-center justify-center border border-gray-200 px-3 py-2 text-sm font-medium first:rounded-s-lg last:rounded-e-lg focus:bg-gray-300  focus:outline-none disabled:pointer-events-none disabled:opacity-50 aria-[current=page]:bg-[#0066FF] aria-[current=page]:text-white aria-[current=page]:border-x-0"
+                class="flex min-h-[38px] min-w-[38px] items-center justify-center border border-gray-200 px-3 py-2 text-sm font-medium first:rounded-s-lg last:rounded-e-lg focus:bg-gray-300 focus:outline-none disabled:pointer-events-none disabled:opacity-50 aria-[current=page]:border-x-0 aria-[current=page]:bg-[#0066FF] aria-[current=page]:text-white"
                 aria-current="page">1</button>
 
             <button type="button"
-                class="flex min-h-[38px] min-w-[38px] items-center justify-center border border-gray-200 px-3 py-2 text-sm font-medium text-gray-400 first:rounded-s-lg last:rounded-e-lg hover:bg-[#DEEBFF] focus:bg-gray-300 focus:outline-none disabled:pointer-events-none disabled:opacity-50 aria-[current=page]:bg-[#0066FF] aria-[current=page]:text-white aria-[current=page]:border-x-0">2</button>
+                class="flex min-h-[38px] min-w-[38px] items-center justify-center border border-gray-200 px-3 py-2 text-sm font-medium text-gray-400 first:rounded-s-lg last:rounded-e-lg hover:bg-[#DEEBFF] focus:bg-gray-300 focus:outline-none disabled:pointer-events-none disabled:opacity-50 aria-[current=page]:border-x-0 aria-[current=page]:bg-[#0066FF] aria-[current=page]:text-white">2</button>
             <button type="button"
-                class="flex min-h-[38px] min-w-[38px] items-center justify-center border border-gray-200 px-3 py-2 text-sm font-medium text-gray-400 first:rounded-s-lg last:rounded-e-lg hover:bg-[#DEEBFF] focus:bg-gray-300 focus:outline-none disabled:pointer-events-none disabled:opacity-50 aria-[current=page]:bg-[#0066FF] aria-[current=page]:text-white aria-[current=page]:border-x-0">3</button>
+                class="flex min-h-[38px] min-w-[38px] items-center justify-center border border-gray-200 px-3 py-2 text-sm font-medium text-gray-400 first:rounded-s-lg last:rounded-e-lg hover:bg-[#DEEBFF] focus:bg-gray-300 focus:outline-none disabled:pointer-events-none disabled:opacity-50 aria-[current=page]:border-x-0 aria-[current=page]:bg-[#0066FF] aria-[current=page]:text-white">3</button>
             <div class="hs-tooltip inline-block border border-gray-200">
                 <button type="button"
-                    class="hs-tooltip-toggle group flex min-h-[36px] hover:bg-[#DEEBFF] min-w-[36px] items-center justify-center p-2 text-sm font-medium text-gray-400 hover:text-blue-600 focus:bg-gray-300 focus:outline-none disabled:pointer-events-none disabled:opacity-50 aria-[current=page]:bg-[#0066FF] aria-[current=page]:text-white aria-[current=page]:border-x-0">
+                    class="hs-tooltip-toggle group flex min-h-[36px] min-w-[36px] items-center justify-center p-2 text-sm font-medium text-gray-400 hover:bg-[#DEEBFF] hover:text-blue-600 focus:bg-gray-300 focus:outline-none disabled:pointer-events-none disabled:opacity-50 aria-[current=page]:border-x-0 aria-[current=page]:bg-[#0066FF] aria-[current=page]:text-white">
                     <span class="text-xs group-hover:hidden">•••</span>
                     <svg class="hidden size-5 shrink-0 group-hover:block" xmlns="http://www.w3.org/2000/svg" width="24"
                         height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -208,7 +208,7 @@
                 </button>
             </div>
             <button type="button"
-                class="flex min-h-[38px] min-w-[38px] items-center justify-center border border-gray-200 px-3 py-2 text-sm text-gray-400 first:rounded-s-lg last:rounded-e-lg hover:bg-[#DEEBFF] focus:bg-gray-300 focus:outline-none disabled:pointer-events-none disabled:opacity-50 aria-[current=page]:bg-[#0066FF] font-medium aria-[current=page]:text-white aria-[current=page]:border-x-0">8</button>
+                class="flex min-h-[38px] min-w-[38px] items-center justify-center border border-gray-200 px-3 py-2 text-sm font-medium text-gray-400 first:rounded-s-lg last:rounded-e-lg hover:bg-[#DEEBFF] focus:bg-gray-300 focus:outline-none disabled:pointer-events-none disabled:opacity-50 aria-[current=page]:border-x-0 aria-[current=page]:bg-[#0066FF] aria-[current=page]:text-white">8</button>
             <button type="button"
                 class="inline-flex min-h-[38px] min-w-[38px] items-center justify-center gap-x-1.5 border border-gray-200 px-2.5 py-2 text-sm text-gray-400 first:rounded-s-lg last:rounded-e-lg hover:bg-[#DEEBFF] focus:bg-gray-300 focus:outline-none disabled:pointer-events-none disabled:opacity-50"
                 aria-label="Next">
