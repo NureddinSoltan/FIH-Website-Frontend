@@ -1,7 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   // content: ["./templates/*.{htm,js}"],
-  content: ["./templates/**/*.html"],
+  content: [
+    "./templates/**/*.html",
+    'node_modules/preline/dist/*.js',
+  ],
   theme: {
     extend: {
       fontFamily: {
@@ -13,6 +16,7 @@ module.exports = {
         '3xl': '4px 4px 10px 0px rgba(0, 0, 0, 0.25)',
         '3.5xl': '5.412px 4.736px 13.531px 0px rgba(0, 0, 0, 0.25)',
         '3.75xl' : '8px 7px 20px 0px rgba(0, 0, 0, 0.25)',
+        '3.80xl' : '8px 7px 16px 0px rgba(0, 0, 0, 0.25)',
         'pagination-shadow' : '4.485px 4.485px 11.212px 0px rgba(0, 0, 0, 0.25)',
       },
       screens: {
@@ -22,6 +26,8 @@ module.exports = {
 
     },
   },
-  plugins: [],
+  plugins: [
+    require('preline/plugin'),
+  ],
 }
 

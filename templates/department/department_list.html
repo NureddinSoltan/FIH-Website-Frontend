@@ -23,20 +23,138 @@
 </head>
 
 <body>
+    <!-- SEE NOTES: rounded 2xl from 15px? -->
+    <header
+    id="navbar" class="fixed flex rounded-[15px] flex-wrap z-[100] sm:justify-start sm:flex-nowrap w-[96%] top-3 left-0 right-0 mx-auto bg-white text-sm py-3 dark:bg-neutral-800 transition-transform duration-300 ease-in-out">
+        <nav class="max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between">
+            <div class="flex items-center justify-between">
+                <a class="flex-none text-xl font-semibold dark:text-white focus:outline-none focus:opacity-80" href="#"
+                    aria-label="Brand">
+                    <img class="w-28  h-auto" src="/assets/core/imgs/logo.png" alt="Logo">
+                </a>
+                <div class="sm:hidden flex justify-center items-center gap-3">
+                    <a class="font-medium text-gray-600 hover:text-gray-400 focus:outline-none focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500"
+                    href="#">Contact Us</a>
+                    <button type="button"
+                        class="hs-collapse-toggle relative size-7 flex justify-center items-center gap-x-2 rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-transparent dark:border-neutral-700 dark:text-white dark:hover:bg-white/10 dark:focus:bg-white/10"
+                        id="hs-navbar-example-collapse" aria-expanded="false" aria-controls="hs-navbar-example"
+                        aria-label="Toggle navigation" data-hs-collapse="#hs-navbar-example">
+                        <svg class="hs-collapse-open:hidden shrink-0 size-4" xmlns="http://www.w3.org/2000/svg"
+                            width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="3" x2="21" y1="6" y2="6" />
+                            <line x1="3" x2="21" y1="12" y2="12" />
+                            <line x1="3" x2="21" y1="18" y2="18" />
+                        </svg>
+                        <svg class="hs-collapse-open:block hidden shrink-0 size-4" xmlns="http://www.w3.org/2000/svg"
+                            width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 6 6 18" />
+                            <path d="m6 6 12 12" />
+                        </svg>
+                        <span class="sr-only">Toggle navigation</span>
+                    </button>
+                </div>
+            </div>
+
+            <div id="hs-navbar-example"
+                class="hidden hs-collapse overflow-hidden transition-all duration-300 basis-full grow sm:block"
+                aria-labelledby="hs-navbar-example-collapse">
+                <div class="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:ps-5">
+                    <a class="font-medium text-blue-500 focus:outline-none" href="#" aria-current="page">Home</a>
+                    <a class="font-medium text-gray-600 hover:text-gray-400 focus:outline-none focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500"
+                        href="#">Departments</a>
+                    <a class="font-medium text-gray-600 hover:text-gray-400 focus:outline-none focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500"
+                        href="#">Doctors</a>
+                    <a class="font-medium text-gray-600 hover:text-gray-400 focus:outline-none focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500"
+                        href="#">Blog</a>
+                    <!-- Drop down menu -->
+                    <div class="hs-dropdown [--strategy:static] sm:[--strategy:fixed] [--adaptive:none] ">
+                        <button id="hs-navbar-example-dropdown" type="button"
+                            class="hs-dropdown-toggle flex items-center w-full text-gray-600 hover:text-gray-400 focus:outline-none focus:text-gray-400 font-medium dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500"
+                            aria-haspopup="menu" aria-expanded="false" aria-label="Mega Menu">
+                            Other Links
+                            <svg class="hs-dropdown-open:-rotate-180 sm:hs-dropdown-open:rotate-0 duration-300 ms-1 shrink-0 size-4"
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="m6 9 6 6 6-6" />
+                            </svg>
+                        </button>
+
+                        <div class="hs-dropdown-menu transition-[opacity,margin] ease-in-out duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 sm:w-48 z-10 bg-white sm:shadow-md rounded-lg p-1 space-y-1 dark:bg-neutral-800 sm:dark:border dark:border-neutral-700 dark:divide-neutral-700 before:absolute top-full sm:border before:-top-5 before:start-0 before:w-full before:h-5 hidden"
+                            role="menu" aria-orientation="vertical" aria-labelledby="hs-navbar-example-dropdown">
+                            <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300"
+                                href="#">
+                                About
+                            </a>
+                            <div
+                                class="hs-dropdown [--strategy:static] sm:[--strategy:absolute] [--adaptive:none] relative">
+                                <button id="hs-navbar-example-dropdown-sub" type="button"
+                                    class="hs-dropdown-toggle w-full flex justify-between items-center text-sm text-gray-800 rounded-lg py-2 px-3 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300">
+                                    Sub Menu
+                                    <svg class="hs-dropdown-open:-rotate-180 sm:hs-dropdown-open:-rotate-90 sm:-rotate-90 duration-300 ms-2 shrink-0 size-4"
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="m6 9 6 6 6-6" />
+                                    </svg>
+                                </button>
+
+                                <div class="hs-dropdown-menu transition-[opacity,margin] ease-in-out duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 sm:w-48 hidden z-10 sm:mt-2 bg-white sm:shadow-md rounded-lg dark:bg-neutral-800 sm:dark:border dark:border-neutral-700 dark:divide-neutral-700 before:absolute sm:border before:-end-5 before:top-0 before:h-full before:w-5 sm:!mx-[10px] top-0 end-full"
+                                    role="menu" aria-orientation="vertical"
+                                    aria-labelledby="hs-navbar-example-dropdown-sub">
+                                    <div class="p-1 space-y-1">
+                                        <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300"
+                                            href="#">
+                                            About
+                                        </a>
+                                        <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300"
+                                            href="#">
+                                            Downloads
+                                        </a>
+                                        <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300"
+                                            href="#">
+                                            Team Account
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300"
+                                href="#">
+                                Events
+                            </a>
+                            <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300"
+                                href="#">
+                                Testimonials
+                            </a>
+                            <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300"
+                                href="#">
+                                Patient Stories
+                            </a>
+                            <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300"
+                                href="#">
+                                Our Sponsors
+                            </a>
+                        </div>
+                    </div>
+                    <a class="sm:inline font-medium text-gray-600 hover:text-gray-400 focus:outline-none focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500"
+                    href="#">Contact Us</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
     <!-- Landing section: Introduction with background image and text -->
     <section
         class="landing m-0 flex h-[31vh] w-full items-center justify-center bg-[url('/assets/department/imgs/landing.png')] bg-cover bg-center p-0 shadow-4xl lg:h-[46vh]">
-        <!-- DONE: Change the gap fpr latger screen -->
         <div class="text flex flex-col items-center justify-center gap-4 text-center text-white lg:gap-6">
             <h1 class="text-3xl font-bold md:text-5xl lg:text-7xl">Departments</h1>
-            <!-- DONE: make the font lighter for small screen -->
             <p class="px-4 text-lg font-light md:text-2xl md:font-normal lg:text-3xl">Experienced in multiple medical
                 specialties</p>
         </div>
     </section>
     <!-- End of Landing section -->
-
-    <!-- TODO: CONVER THE SEARCH ICON -->
 
     <!-- Searching section: This is searching box with searching button -->
     <section class="searching container mx-auto flex flex-col px-7 md:px-5">
@@ -73,8 +191,7 @@
     <!-- End of Searching section -->
 
     <!-- Department section: This is the Department icon section -->
-    <!-- DONE: 4 cards on 17inch -->
-    <!-- DONE: 1 column on less than 350px -->
+
     <section
         class="department-icon container mx-auto mt-7 grid grid-cols-2 grid-rows-6 gap-3 px-7 md:grid-cols-3 md:grid-rows-4 md:gap-5 md:px-5 xsm:grid-cols-1 xsm:grid-rows-1 3xl:grid-cols-4 3xl:grid-rows-3">
         <div
@@ -167,11 +284,10 @@
 
     <!-- Pagination Section -->
     <!-- <nav class="my-12 flex justify-center items-center -space-x-px shadow-pagination-shadow" aria-label="Pagination"> -->
-    <!-- TODO: CHANGE THE FONT SIZE WHEN HOVERING    -->
     <nav class="my-12 flex items-center justify-center" aria-label="Pagination">
         <div class="inline-flex rounded-lg shadow-pagination-shadow">
             <button type="button"
-                class="inline-flex min-h-[38px] min-w-[38px] items-center justify-center gap-x-1.5 border border-gray-200 px-2.5 py-2 text-sm text-gray-400 first:rounded-s-lg last:rounded-e-lg hover:bg-[#DEEBFF] focus:bg-gray-300 focus:outline-none disabled:pointer-events-none disabled:opacity-50"
+                class="inline-flex min-h-[38px] min-w-[38px] items-center justify-center gap-x-1.5 border border-gray-200 px-2.5 py-2 text-sm text-gray-400 first:rounded-s-lg last:rounded-e-lg hover:bg-[#DEEBFF] hover:text-black focus:bg-gray-300 focus:outline-none disabled:pointer-events-none disabled:opacity-50"
                 aria-label="Previous">
                 <svg class="size-3.5 shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
@@ -185,13 +301,13 @@
             </button>
 
             <button type="button"
-                class="flex min-h-[38px] min-w-[38px] items-center justify-center border border-gray-200 px-3 py-2 text-sm font-medium first:rounded-s-lg last:rounded-e-lg focus:bg-gray-300 focus:outline-none disabled:pointer-events-none disabled:opacity-50 aria-[current=page]:border-x-0 aria-[current=page]:bg-[#0066FF] aria-[current=page]:text-white"
+                class="flex min-h-[38px] min-w-[38px] items-center justify-center border border-gray-200 px-3 py-2 text-sm font-medium first:rounded-s-lg last:rounded-e-lg hover:text-black focus:bg-gray-300 focus:outline-none disabled:pointer-events-none disabled:opacity-50 aria-[current=page]:border-x-0 aria-[current=page]:bg-[#0066FF] aria-[current=page]:text-white"
                 aria-current="page">1</button>
 
             <button type="button"
-                class="flex min-h-[38px] min-w-[38px] items-center justify-center border border-gray-200 px-3 py-2 text-sm font-medium text-gray-400 first:rounded-s-lg last:rounded-e-lg hover:bg-[#DEEBFF] focus:bg-gray-300 focus:outline-none disabled:pointer-events-none disabled:opacity-50 aria-[current=page]:border-x-0 aria-[current=page]:bg-[#0066FF] aria-[current=page]:text-white">2</button>
+                class="flex min-h-[38px] min-w-[38px] items-center justify-center border border-gray-200 px-3 py-2 text-sm font-medium text-gray-400 first:rounded-s-lg last:rounded-e-lg hover:bg-[#DEEBFF] hover:text-black focus:bg-gray-300 focus:outline-none disabled:pointer-events-none disabled:opacity-50 aria-[current=page]:border-x-0 aria-[current=page]:bg-[#0066FF] aria-[current=page]:text-white">2</button>
             <button type="button"
-                class="flex min-h-[38px] min-w-[38px] items-center justify-center border border-gray-200 px-3 py-2 text-sm font-medium text-gray-400 first:rounded-s-lg last:rounded-e-lg hover:bg-[#DEEBFF] focus:bg-gray-300 focus:outline-none disabled:pointer-events-none disabled:opacity-50 aria-[current=page]:border-x-0 aria-[current=page]:bg-[#0066FF] aria-[current=page]:text-white">3</button>
+                class="flex min-h-[38px] min-w-[38px] items-center justify-center border border-gray-200 px-3 py-2 text-sm font-medium text-gray-400 first:rounded-s-lg last:rounded-e-lg hover:bg-[#DEEBFF] hover:text-black focus:bg-gray-300 focus:outline-none disabled:pointer-events-none disabled:opacity-50 aria-[current=page]:border-x-0 aria-[current=page]:bg-[#0066FF] aria-[current=page]:text-white">3</button>
             <div class="hs-tooltip inline-block border border-gray-200">
                 <button type="button"
                     class="hs-tooltip-toggle group flex min-h-[36px] min-w-[36px] items-center justify-center p-2 text-sm font-medium text-gray-400 hover:bg-[#DEEBFF] hover:text-blue-600 focus:bg-gray-300 focus:outline-none disabled:pointer-events-none disabled:opacity-50 aria-[current=page]:border-x-0 aria-[current=page]:bg-[#0066FF] aria-[current=page]:text-white">
@@ -208,9 +324,9 @@
                 </button>
             </div>
             <button type="button"
-                class="flex min-h-[38px] min-w-[38px] items-center justify-center border border-gray-200 px-3 py-2 text-sm font-medium text-gray-400 first:rounded-s-lg last:rounded-e-lg hover:bg-[#DEEBFF] focus:bg-gray-300 focus:outline-none disabled:pointer-events-none disabled:opacity-50 aria-[current=page]:border-x-0 aria-[current=page]:bg-[#0066FF] aria-[current=page]:text-white">8</button>
+                class="flex min-h-[38px] min-w-[38px] items-center justify-center border border-gray-200 px-3 py-2 text-sm font-medium text-gray-400 first:rounded-s-lg last:rounded-e-lg hover:bg-[#DEEBFF] hover:text-black focus:bg-gray-300 focus:outline-none disabled:pointer-events-none disabled:opacity-50 aria-[current=page]:border-x-0 aria-[current=page]:bg-[#0066FF] aria-[current=page]:text-white">8</button>
             <button type="button"
-                class="inline-flex min-h-[38px] min-w-[38px] items-center justify-center gap-x-1.5 border border-gray-200 px-2.5 py-2 text-sm text-gray-400 first:rounded-s-lg last:rounded-e-lg hover:bg-[#DEEBFF] focus:bg-gray-300 focus:outline-none disabled:pointer-events-none disabled:opacity-50"
+                class="inline-flex min-h-[38px] min-w-[38px] items-center justify-center gap-x-1.5 border border-gray-200 px-2.5 py-2 text-sm text-gray-400 first:rounded-s-lg last:rounded-e-lg hover:bg-[#DEEBFF] hover:text-black focus:bg-gray-300 focus:outline-none disabled:pointer-events-none disabled:opacity-50"
                 aria-label="Next">
                 <span class="sr-only">Next</span>
                 <svg class="size-3.5 shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -221,7 +337,115 @@
             </button>
         </div>
     </nav>
+
     <!-- End of Pagination Section -->
+    <script src="/node_modules/preline/dist/preline.js"></script>
+    <!-- <script>
+        let lastScrollTop = 0;
+        const navbar = document.getElementById('navbar');
+    
+        window.addEventListener('scroll', () => {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+            // Check if the scroll is more than 50px
+            if (scrollTop > lastScrollTop && scrollTop > 300) {
+                // Scroll down, hide the navbar
+                navbar.style.transform = 'translateY(-150%)';
+            } else if (scrollTop < lastScrollTop) {
+                // Scroll up, show the navbar
+                navbar.style.transform = 'translateY(0)';
+            }
+    
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+        });
+    </script> -->
+
+<!-- <script>
+    let lastScrollTop = 0;
+    const navbar = document.getElementById('navbar');
+    let scrollThreshold = 300;  // Set initial threshold to 300px
+
+    window.addEventListener('scroll', () => {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop && scrollTop > scrollThreshold) {
+            navbar.style.transform = 'translateY(-150%)';
+
+            scrollThreshold = scrollTop + 1000;
+        } 
+        else if (scrollTop < lastScrollTop) {
+            navbar.style.transform = 'translateY(0)';
+            
+            scrollThreshold = scrollTop + 100;
+        }
+
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; 
+    });
+</script> -->
+
+<!-- ===== Real one ===== -->
+<script>
+    let lastScrollTop = 0;
+    const navbar = document.getElementById('navbar');
+    let scrollThreshold = 300;  
+    const resetThreshold = 500; 
+
+    window.addEventListener('scroll', () => {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop && scrollTop > scrollThreshold) {
+            navbar.style.transform = 'translateY(-150%)';
+
+            scrollThreshold = scrollTop + 1000;
+        } 
+        else if (scrollTop < lastScrollTop) {
+            navbar.style.transform = 'translateY(0)';
+
+            if (scrollTop < resetThreshold) {
+                scrollThreshold = 300;
+            } else {
+                scrollThreshold = scrollTop + 100;
+            }
+        }
+
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; 
+    });
+</script>
+
+<!-- <script>
+    let lastScrollTop = 0;
+    const navbar = document.getElementById('navbar');
+    let scrollThreshold = 300;  // Set initial threshold to 300px
+    const resetThreshold = 500; // Set a point to reset the scrollThreshold (500px)
+
+    window.addEventListener('scroll', () => {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        // If the user scrolls down and passes the scrollThreshold
+        if (scrollTop > lastScrollTop && scrollTop > scrollThreshold) {
+            // Hide the navbar
+            navbar.style.transform = 'translateY(-150%)';
+
+            // Set the new scrollThreshold to scrollTop + 1000 to hide after 1000px down
+            scrollThreshold = scrollTop + 1000;
+        } 
+        // If the user scrolls up
+        else if (scrollTop < lastScrollTop) {
+            // Show the navbar
+            navbar.style.transform = 'translateY(0)';
+
+            // If scrollTop is less than the resetThreshold (500px), reset scrollThreshold to 300px
+            if (scrollTop < resetThreshold) {
+                scrollThreshold = 300;
+            } else {
+                // Otherwise, set the scrollThreshold to hide after scrolling down 100px again
+                scrollThreshold = scrollTop + 100;
+            }
+        }
+
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Handle mobile or negative scrolling
+    });
+</script> -->
 </body>
 
 </html>
