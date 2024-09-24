@@ -67,7 +67,7 @@
                     <a class="font-medium text-gray-600 hover:text-gray-400 focus:outline-none focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500"
                         href="#">Doctors</a>
                     <a class="font-medium text-gray-600 hover:text-gray-400 focus:outline-none focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500"
-                        href="#">Blog</a>
+                        href="/templates/blog/blog_list.html">Blog</a>
                     <!-- Drop down menu -->
                     <div class="hs-dropdown [--strategy:static] sm:[--strategy:fixed] [--adaptive:none] ">
                         <button id="hs-navbar-example-dropdown" type="button"
@@ -146,10 +146,12 @@
     </header>
 
     <!-- Landing section: Introduction with background image and text -->
+    <!-- TODO: handle the screen in the rotating mode -->
+    <!-- SHOULD I: make the h for mobile to 50vh -->
     <section
-        class="landing m-0 flex h-[31vh] w-full items-center justify-center bg-[url('/assets/department/imgs/landing.png')] bg-cover bg-center p-0 shadow-4xl lg:h-[46vh]">
+        id="landing" class="landing m-0 xsm:h-[56vh] flex h-[40vh] w-full items-center justify-center bg-[url('/assets/department/imgs/landing.png')] bg-cover bg-center p-0 shadow-4xl lg:h-[50vh]">
         <div class="text flex flex-col items-center justify-center gap-4 text-center text-white lg:gap-6">
-            <h1 class="text-3xl font-bold md:text-5xl lg:text-7xl">Departments</h1>
+            <h1 class="text-3xl mt-[12%] font-bold md:text-5xl lg:text-7xl">Departments</h1>
             <p class="px-4 text-lg font-light md:text-2xl md:font-normal lg:text-3xl">Experienced in multiple medical
                 specialties</p>
         </div>
@@ -409,6 +411,11 @@
         }
 
         lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; 
+    });
+
+    window.addEventListener('orientationchange', function() {
+        const element = document.getElementById('landing');
+        element.style.height = '70vh';
     });
 </script>
 

@@ -147,10 +147,11 @@
     
     <!-- TODO: Expand the vh -->
     <section
-        class="landing m-0 flex h-[31vh] w-full items-center justify-center bg-[url('/assets/department/imgs/landing.png')] bg-cover bg-center p-0 shadow-4xl lg:h-[46vh]">
+        class="landing m-0 xsm:h-[56vh] flex h-[40vh] w-full items-center justify-center bg-[url('/assets/department/imgs/landing.png')] bg-cover bg-center p-0 shadow-4xl lg:h-[50vh]">
+
         <div
             class="text flex flex-col items-center justify-center gap-4 pt-14 text-center text-white md:pt-16 lg:gap-6">
-            <h1 class="text-3xl font-bold md:text-5xl lg:text-7xl">Health blog</h1>
+            <h1 class="text-3xl  xsm:mt-[11%] font-bold md:text-5xl lg:text-7xl">Health blog</h1>
             <p
                 class="max-w-[95%] px-6 text-base font-light md:max-w-[75%] md:px-5 md:text-xl md:font-normal lg:max-w-[80%] lg:text-2xl">
                 Welcome to our blog, where we share the latest insights, health tips, and stories from our dedicated
@@ -210,77 +211,95 @@
     <!-- End of Searching section -->
 
     <!-- Blog Section: this is blog section card -->
-     <!-- TODO: make the card in mobile phone same as desktop -->
-     <!-- TODO: when the title become bigger i will work in the row itself and also in the smaller version -->
+     <!-- DONE: make the card in mobile phone same as desktop -->
+     <!-- DONE: when the title become bigger i will work in the row itself and also in the smaller version -->
      <!-- TODO: specify a word limit to the title -->
      <!-- TODO: specify the image sizes -->
+      <!-- SHOULD I: make the subtitle font-light? -->
+      <!-- SHOULD I: The image in figma for mobile is so tight!! We can't make it like this -->
       <!-- COMMENT: Leave the image alone: don't touch the image plese, make it with fixed height -->
-      <!-- TODO: change the font weight to 400 for date :) -->
-       <!-- TODO: change the border of the image -->
+      <!-- DONE: change the font weight to 400 for date :) -->
+       <!-- DONE: change the border of the image -->
      <!-- class="card group flex flex-row items-center justify-center gap-x-3 rounded-2xl bg-white pr-3 shadow-3.5xl hover:bg-[#C1C1C1] md:col-span-2 md:flex-col md:justify-start md:pr-0"> -->
     <section
-        class="blog-card container mx-auto grid grid-cols-1 grid-rows-none gap-3 px-7 md:grid-cols-2 md:grid-rows-4 md:gap-7 md:px-3 lg:grid-cols-3 3xl:grid-cols-4 3xl:grid-rows-3">
+        class="blog-card container mx-auto grid grid-cols-1  gap-3 px-7 md:grid-cols-2 md:grid-rows-4 md:gap-7 md:px-3 lg:grid-cols-3 3xl:grid-cols-4 3xl:grid-rows-3"  style="grid-template-rows: auto;">
+        
         <div
-
-            class="card group md:col-span-2 flex flex-row items-center justify-center gap-x-3 rounded-2xl border-[1px] border-solid border-[#E6E6E6] bg-white pr-3 hover:shadow-3.80xl md:flex-col md:justify-start md:rounded-3xl md:pr-0">
+            class="card group md:col-span-2 flex flex-col auto-rows-auto items-center justify-center gap-x-3 rounded-2xl border-[1px] border-solid border-[#E6E6E6] bg-white hover:shadow-3.80xl md:justify-start md:rounded-3xl">
             <!-- Image section -->
             <a href="" class="contents">
-                <img class="h-full w-[35%] rounded-l-2xl object-cover md:h-[231px] md:w-full lg:h-60 lg:rounded-2xl"
+                <img class="h-[168px] w-full rounded-t-2xl object-cover md:h-[231px] lg:h-60"
                     src="/assets/blog/imgs/department-icon-3.png" alt="" />
             </a>
             <!-- text section -->
-            <div class="w-full md:p-3 lg:p-4">
-                <p class="pt-5 text-xs font-light text-gray-500 md:pt-0 md:text-sm lg:text-[15px]">August 3, 2024</p>
-                <!-- SEE NOTES: Here if i make the text larger what will hapeened? also same for the img -->
+            <div class="w-http://127.0.0.1:5500/templates/department/department_list.htmlfull p-3 lg:p-4">
+                <p class="text-xs text-gray-500 md:pt-0 md:text-sm lg:text-[15px]">August 3, 2024</p>
                 <a href="">
-                    <h3 class="py-2 text-lg font-semibold group-hover:text-[#06F] md:py-3 md:text-xl lg:text-2xl">
+                    <h3 class="py-2 text-lg font-semibold group-hover:text-[#06F] md:py-3 md:text-2xl lg:text-4xl">
                         Unraveling the Brain's Mysteries: Exploring New Frontiers</h3>
                 </a>
                 <p class="hidden text-xs font-light text-gray-500 md:inline md:text-sm lg:text-[16px] lg:font-normal">
                     Far far away, behind the word mountains, far from the countries Vokalia and Consonantia...</p>
-                <!-- COMMENT: what is the font weight here? -->
-                <p class="pb-3 text-xs md:pb-0 md:pt-3 md:text-sm lg:text-[15px]"><span class="text-gray-400">By</span>
-                    <a href="" class="text-[#06F] hover:underline">Dr. Mohamed Hamdy</a> <span
-                        class="text-gray-400">in</span> <a href="" class="text-[#06F] hover:underline">Neurology</a></p>
-            </div>
-        </div>
-        
-        <div
-            class="card group flex flex-row items-center justify-center gap-x-3 rounded-2xl border-[1px] border-solid border-[#E6E6E6] bg-white pr-3 hover:shadow-3.80xl md:flex-col md:justify-start md:rounded-3xl md:pr-0">
-            <!-- Image section -->
-            <a href="" class="contents">
-                <img class="h-full w-[35%] rounded-l-2xl object-cover md:h-[231px] md:w-full lg:h-60 lg:rounded-2xl"
-                    src="/assets/blog/imgs/department_icon.png" alt="" />
-            </a>
-            <!-- text section -->
-            <div class="w-full md:p-3 lg:p-4">
-                <p class="pt-5 text-xs font-light text-gray-500 md:pt-0 md:text-sm lg:text-[15px]">August 3, 2024</p>
-                <!-- SEE NOTES: Here if i make the text larger what will hapeened? also same for the img -->
-                <a href="">
-                    <h3 class="py-2 text-lg font-semibold group-hover:text-[#06F] md:py-3 md:text-xl lg:text-2xl">
-                        Unraveling the Brain's Mysteries: Exploring New Frontiers</h3>
-                </a>
-                <p class="hidden text-xs font-light text-gray-500 md:inline md:text-sm lg:text-[16px] lg:font-normal">
-                    Far far away, behind the word mountains, far from the countries Vokalia and Consonantia...</p>
-                <!-- COMMENT: what is the font weight here? -->
-                <p class="pb-3 text-xs md:pb-0 md:pt-3 md:text-sm lg:text-[15px]"><span class="text-gray-400">By</span>
+                <p class="text-xs md:pb-0 pt-3 md:text-sm lg:text-[15px]"><span class="text-gray-400">By</span>
                     <a href="" class="text-[#06F] hover:underline">Dr. Mohamed Hamdy</a> <span
                         class="text-gray-400">in</span> <a href="" class="text-[#06F] hover:underline">Neurology</a></p>
             </div>
         </div>
 
-        
-        <!-- COMMENT: Do I really need to make the border more bigger? with just 5px? -->
         <div
-            class="card group flex flex-row items-center justify-center gap-x-3 rounded-2xl border-[1px] border-solid border-[#E6E6E6] bg-white pr-3 hover:shadow-3.80xl md:flex-col md:justify-start md:rounded-3xl md:pr-0">
+            class="card group flex flex-col items-center justify-center gap-x-3 rounded-2xl border-[1px] border-solid border-[#E6E6E6] bg-white hover:shadow-3.80xl md:justify-start md:rounded-3xl">
             <!-- Image section -->
             <a href="" class="contents">
-                <img class="h-full w-[35%] rounded-l-2xl object-cover md:h-[231px] md:w-full lg:h-60 lg:rounded-2xl"
+                <img class="h-[168px] w-full rounded-t-2xl object-cover md:h-[231px] lg:h-60"
                     src="/assets/blog/imgs/department-icon-3.png" alt="" />
             </a>
             <!-- text section -->
-            <div class="w-full md:p-3 lg:p-4">
-                <p class="pt-5 text-xs font-light text-gray-500 md:pt-0 md:text-sm lg:text-[15px]">August 3, 2024</p>
+            <div class="w-http://127.0.0.1:5500/templates/department/department_list.htmlfull p-3 lg:p-4">
+                <p class="text-xs text-gray-500 md:pt-0 md:text-sm lg:text-[15px]">August 3, 2024</p>
+                <a href="">
+                    <h3 class="py-2 text-lg font-semibold group-hover:text-[#06F] md:py-3 md:text-xl lg:text-2xl">
+                        Unraveling the Brain's Mysteries: Exploring New Frontiers</h3>
+                </a>
+                <p class="hidden text-xs font-light text-gray-500 md:inline md:text-sm lg:text-[16px] lg:font-normal">
+                    Far far away, behind the word mountains, far from the countries Vokalia and Consonantia...</p>
+                <p class="text-xs md:pb-0 pt-3 md:text-sm lg:text-[15px]"><span class="text-gray-400">By</span>
+                    <a href="" class="text-[#06F] hover:underline">Dr. Mohamed Hamdy</a> <span
+                        class="text-gray-400">in</span> <a href="" class="text-[#06F] hover:underline">Neurology</a></p>
+            </div>
+        </div>
+
+        <div
+            class="card group flex flex-col items-center justify-center gap-x-3 rounded-2xl border-[1px] border-solid border-[#E6E6E6] bg-white hover:shadow-3.80xl md:justify-start md:rounded-3xl">
+            <!-- Image section -->
+            <a href="" class="contents">
+                <img class="h-[168px] w-full rounded-t-2xl object-cover md:h-[231px] lg:h-60"
+                    src="/assets/blog/imgs/department-icon-3.png" alt="" />
+            </a>
+            <!-- text section -->
+            <div class="w-http://127.0.0.1:5500/templates/department/department_list.htmlfull p-3 lg:p-4">
+                <p class="text-xs text-gray-500 md:pt-0 md:text-sm lg:text-[15px]">August 3, 2024</p>
+                <a href="">
+                    <h3 class="py-2 text-lg font-semibold group-hover:text-[#06F] md:py-3 md:text-xl lg:text-2xl">
+                        Unraveling the Brain's Mysteries: Exploring New Frontiers</h3>
+                </a>
+                <p class="hidden text-xs font-light text-gray-500 md:inline md:text-sm lg:text-[16px] lg:font-normal">
+                    Far far away, behind the word mountains, far from the countries Vokalia and Consonantia...</p>
+                <p class="text-xs md:pb-0 pt-3 md:text-sm lg:text-[15px]"><span class="text-gray-400">By</span>
+                    <a href="" class="text-[#06F] hover:underline">Dr. Mohamed Hamdy</a> <span
+                        class="text-gray-400">in</span> <a href="" class="text-[#06F] hover:underline">Neurology</a></p>
+            </div>
+        </div>
+
+        <div
+            class="card group flex flex-col items-center justify-center gap-x-3 rounded-2xl border-[1px] border-solid border-[#E6E6E6] bg-white hover:shadow-3.80xl md:justify-start md:rounded-3xl">
+            <!-- Image section -->
+            <a href="" class="contents">
+                <img class="h-[168px] w-full rounded-t-2xl object-cover md:h-[231px] lg:h-60"
+                    src="/assets/blog/imgs/department-icon-3.png" alt="" />
+            </a>
+            <!-- text section -->
+            <div class="w-http://127.0.0.1:5500/templates/department/department_list.htmlfull p-3 lg:p-4">
+                <p class="text-xs text-gray-500 md:pt-0 md:text-sm lg:text-[15px]">August 3, 2024</p>
                 <!-- SEE NOTES: Here if i make the text larger what will hapeened? also same for the img -->
                 <a href="">
                     <h3 class="py-2 text-lg font-semibold group-hover:text-[#06F] md:py-3 md:text-xl lg:text-2xl">
@@ -288,145 +307,167 @@
                 </a>
                 <p class="hidden text-xs font-light text-gray-500 md:inline md:text-sm lg:text-[16px] lg:font-normal">
                     Far far away, behind the word mountains, far from the countries Vokalia and Consonantia...</p>
-                <!-- COMMENT: what is the font weight here? -->
-                <p class="pb-3 text-xs md:pb-0 md:pt-3 md:text-sm lg:text-[15px]"><span class="text-gray-400">By</span>
+                <p class="text-xs md:pb-0 pt-3 md:text-sm lg:text-[15px]"><span class="text-gray-400">By</span>
                     <a href="" class="text-[#06F] hover:underline">Dr. Mohamed Hamdy</a> <span
                         class="text-gray-400">in</span> <a href="" class="text-[#06F] hover:underline">Neurology</a></p>
             </div>
         </div>
 
         <div
-        class="card group flex flex-row items-center justify-center gap-x-3 rounded-2xl border-[1px] border-solid border-[#E6E6E6] bg-white pr-3 hover:shadow-3.80xl md:flex-col md:justify-start md:rounded-3xl md:pr-0">
-        <!-- Image section -->
-        <a href="" class="contents">
-            <img class="h-full w-[35%] rounded-l-2xl object-cover md:h-[231px] md:w-full lg:h-60 lg:rounded-2xl"
-                src="/assets/blog/imgs/department_icon.png" alt="" />
-        </a>
-        <!-- text section -->
-        <div class="w-full md:p-3 lg:p-4">
-            <p class="pt-5 text-xs font-light text-gray-500 md:pt-0 md:text-sm lg:text-[15px]">August 3, 2024</p>
-            <a href="">
-                <h3 class="py-2 text-lg font-semibold group-hover:text-[#06F] md:py-3 md:text-xl lg:text-2xl">
-                    Unraveling the Brain's Mysteries: Exploring New Frontiers</h3>
-            </a>
-            <p class="hidden text-xs font-light text-gray-500 md:inline md:text-sm lg:text-[16px] lg:font-normal">
-                Far far away, behind the word mountains, far from the countries Vokalia and Consonantia...</p>
-            <!-- COMMENT: what is the font weight here? -->
-            <p class="pb-3 text-xs md:pb-0 md:pt-3 md:text-sm lg:text-[15px]"><span class="text-gray-400">By</span>
-                <a href="" class="text-[#06F] hover:underline">Dr. Mohamed Hamdy</a> <span
-                    class="text-gray-400">in</span> <a href="" class="text-[#06F] hover:underline">Neurology</a></p>
-        </div>
-    </div>
-
-    <div
-    class="card group flex flex-row items-center justify-center gap-x-3 rounded-2xl border-[1px] border-solid border-[#E6E6E6] bg-white pr-3 hover:shadow-3.80xl md:flex-col md:justify-start md:rounded-3xl md:pr-0">
-    <!-- Image section -->
-    <a href="" class="contents">
-        <img class="h-full w-[35%] rounded-l-2xl object-cover md:h-[231px] md:w-full lg:h-60 lg:rounded-2xl"
-            src="/assets/blog/imgs/department-icon-2.png" alt="" />
-    </a>
-    <!-- text section -->
-    <div class="w-full md:p-3 lg:p-4">
-        <p class="pt-5 text-xs font-light text-gray-500 md:pt-0 md:text-sm lg:text-[15px]">August 3, 2024</p>
-        <!-- SEE NOTES: Here if i make the text larger what will hapeened? also same for the img -->
-        <a href="">
-            <h3 class="py-2 text-lg font-semibold group-hover:text-[#06F] md:py-3 md:text-xl lg:text-2xl">
-                Unraveling the Brain's Mysteries: Exploring New Frontiers</h3>
-        </a>
-        <p class="hidden text-xs font-light text-gray-500 md:inline md:text-sm lg:text-[16px] lg:font-normal">
-            Far far away, behind the word mountains, far from the countries Vokalia and Consonantia...</p>
-        <!-- COMMENT: what is the font weight here? -->
-        <p class="pb-3 text-xs md:pb-0 md:pt-3 md:text-sm lg:text-[15px]"><span class="text-gray-400">By</span>
-            <a href="" class="text-[#06F] hover:underline">Dr. Mohamed Hamdy</a> <span
-                class="text-gray-400">in</span> <a href="" class="text-[#06F] hover:underline">Neurology</a></p>
-    </div>
-</div>
-
-<div
-class="card group flex flex-row items-center justify-center gap-x-3 rounded-2xl border-[1px] border-solid border-[#E6E6E6] bg-white pr-3 hover:shadow-3.80xl md:flex-col md:justify-start md:rounded-3xl md:pr-0">
-<!-- Image section -->
-<a href="" class="contents">
-    <img class="h-full w-[35%] rounded-l-2xl object-cover md:h-[231px] md:w-full lg:h-60 lg:rounded-2xl"
-        src="/assets/blog/imgs/department-icon-3.png" alt="" />
-</a>
-<!-- text section -->
-<div class="w-full md:p-3 lg:p-4">
-    <p class="pt-5 text-xs font-light text-gray-500 md:pt-0 md:text-sm lg:text-[15px]">August 3, 2024</p>
-    <!-- SEE NOTES: Here if i make the text larger what will hapeened? also same for the img -->
-    <a href="">
-        <h3 class="py-2 text-lg font-semibold group-hover:text-[#06F] md:py-3 md:text-xl lg:text-2xl">
-            Unraveling the Brain's Mysteries: Exploring New Frontiers</h3>
-    </a>
-    <p class="hidden text-xs font-light text-gray-500 md:inline md:text-sm lg:text-[16px] lg:font-normal">
-        Far far away, behind the word mountains, far from the countries Vokalia and Consonantia...</p>
-    <!-- COMMENT: what is the font weight here? -->
-    <p class="pb-3 text-xs md:pb-0 md:pt-3 md:text-sm lg:text-[15px]"><span class="text-gray-400">By</span>
-        <a href="" class="text-[#06F] hover:underline">Dr. Mohamed Hamdy</a> <span
-            class="text-gray-400">in</span> <a href="" class="text-[#06F] hover:underline">Neurology</a></p>
-</div>
-</div>
-
-<div
-class="card group flex flex-row items-center justify-center gap-x-3 rounded-2xl border-[1px] border-solid border-[#E6E6E6] bg-white pr-3 hover:shadow-3.80xl md:flex-col md:justify-start md:rounded-3xl md:pr-0">
-<!-- Image section -->
-<a href="" class="contents">
-    <img class="h-full w-[35%] rounded-l-2xl object-cover md:h-[231px] md:w-full lg:h-60 lg:rounded-2xl"
-        src="/assets/blog/imgs/department-icon-3.png" alt="" />
-</a>
-<!-- text section -->
-<div class="w-full md:p-3 lg:p-4">
-    <p class="pt-5 text-xs font-light text-gray-500 md:pt-0 md:text-sm lg:text-[15px]">August 3, 2024</p>
-    <!-- SEE NOTES: Here if i make the text larger what will hapeened? also same for the img -->
-    <a href="">
-        <h3 class="py-2 text-lg font-semibold group-hover:text-[#06F] md:py-3 md:text-xl lg:text-2xl">
-            Unraveling the Brain's Mysteries: Exploring New Frontiers</h3>
-    </a>
-    <p class="hidden text-xs font-light text-gray-500 md:inline md:text-sm lg:text-[16px] lg:font-normal">
-        Far far away, behind the word mountains, far from the countries Vokalia and Consonantia...</p>
-    <!-- COMMENT: what is the font weight here? -->
-    <p class="pb-3 text-xs md:pb-0 md:pt-3 md:text-sm lg:text-[15px]"><span class="text-gray-400">By</span>
-        <a href="" class="text-[#06F] hover:underline">Dr. Mohamed Hamdy</a> <span
-            class="text-gray-400">in</span> <a href="" class="text-[#06F] hover:underline">Neurology</a></p>
-</div>
-</div>
-
-<div
-class="card group flex flex-row items-center justify-center gap-x-3 rounded-2xl border-[1px] border-solid border-[#E6E6E6] bg-white pr-3 hover:shadow-3.80xl md:flex-col md:justify-start md:rounded-3xl md:pr-0">
-<!-- Image section -->
-<a href="" class="contents">
-    <img class="h-full w-[35%] rounded-l-2xl object-cover md:h-[231px] md:w-full lg:h-60 lg:rounded-2xl"
-        src="/assets/blog/imgs/department-icon-3.png" alt="" />
-</a>
-<!-- text section -->
-<div class="w-full md:p-3 lg:p-4">
-    <p class="pt-5 text-xs font-light text-gray-500 md:pt-0 md:text-sm lg:text-[15px]">August 3, 2024</p>
-    <!-- SEE NOTES: Here if i make the text larger what will hapeened? also same for the img -->
-    <a href="">
-        <h3 class="py-2 text-lg font-semibold group-hover:text-[#06F] md:py-3 md:text-xl lg:text-2xl">
-            Unraveling the Brain's Mysteries: Exploring New Frontiers</h3>
-    </a>
-    <p class="hidden text-xs font-light text-gray-500 md:inline md:text-sm lg:text-[16px] lg:font-normal">
-        Far far away, behind the word mountains, far from the countries Vokalia and Consonantia...</p>
-    <!-- COMMENT: what is the font weight here? -->
-    <p class="pb-3 text-xs md:pb-0 md:pt-3 md:text-sm lg:text-[15px]"><span class="text-gray-400">By</span>
-        <a href="" class="text-[#06F] hover:underline">Dr. Mohamed Hamdy</a> <span
-            class="text-gray-400">in</span> <a href="" class="text-[#06F] hover:underline">Neurology</a></p>
-</div>
-</div>
-
-        <div
-            class="card group flex flex-row items-center justify-center gap-x-3 rounded-2xl bg-white p-3 shadow-3.5xl hover:bg-[#C1C1C1]">
+            class="card group flex flex-col items-center justify-center gap-x-3 rounded-2xl border-[1px] border-solid border-[#E6E6E6] bg-white hover:shadow-3.80xl md:justify-start md:rounded-3xl">
             <!-- Image section -->
-            <img class="w-[30%] pb-1.5" src="/assets/blog/imgs/department_icon.png" alt="" />
+            <a href="" class="contents">
+                <img class="h-[168px] w-full rounded-t-2xl object-cover md:h-[231px] lg:h-60"
+                    src="/assets/blog/imgs/department-icon-3.png" alt="" />
+            </a>
             <!-- text section -->
-            <div class="w-full">
-                <p class="text-xs">August 3, 2024</p>
-                <h3 class="pb-2 text-xl font-semibold group-hover:text-[#06F]">Scary Thing That You Don't Get Enough
-                </h3>
-                <p class="text-xs"><span class="text-gray-400">By</span> <a href="" class="text-[#06F]">Dr. Mohamed
-                        Hamdy</a> <span class="text-gray-400">in</span> <a href="" class="text-[#06F]">Neurology</a></p>
+            <div class="w-http://127.0.0.1:5500/templates/department/department_list.htmlfull p-3 lg:p-4">
+                <p class="text-xs text-gray-500 md:pt-0 md:text-sm lg:text-[15px]">August 3, 2024</p>
+
+                <a href="">
+                    <h3 class="py-2 text-lg font-semibold group-hover:text-[#06F] md:py-3 md:text-xl lg:text-2xl">
+                        Unraveling the Brain's Mysteries: Exploring New Frontiers</h3>
+                </a>
+                <p class="hidden text-xs font-light text-gray-500 md:inline md:text-sm lg:text-[16px] lg:font-normal">
+                    Far far away, behind the word mountains, far from the countries Vokalia and Consonantia...</p>
+                <p class="text-xs md:pb-0 pt-3 md:text-sm lg:text-[15px]"><span class="text-gray-400">By</span>
+                    <a href="" class="text-[#06F] hover:underline">Dr. Mohamed Hamdy</a> <span
+                        class="text-gray-400">in</span> <a href="" class="text-[#06F] hover:underline">Neurology</a></p>
             </div>
         </div>
+        <div
+            class="card group flex flex-col items-center justify-center gap-x-3 rounded-2xl border-[1px] border-solid border-[#E6E6E6] bg-white hover:shadow-3.80xl md:justify-start md:rounded-3xl">
+            <!-- Image section -->
+            <a href="" class="contents">
+                <img class="h-[168px] w-full rounded-t-2xl object-cover md:h-[231px] lg:h-60"
+                    src="/assets/blog/imgs/department-icon-3.png" alt="" />
+            </a>
+            <!-- text section -->
+            <div class="w-http://127.0.0.1:5500/templates/department/department_list.htmlfull p-3 lg:p-4">
+                <p class="text-xs text-gray-500 md:pt-0 md:text-sm lg:text-[15px]">August 3, 2024</p>
+
+                <a href="">
+                    <h3 class="py-2 text-lg font-semibold group-hover:text-[#06F] md:py-3 md:text-xl lg:text-2xl">
+                        Unraveling the Brain's Mysteries: Exploring New Frontiers</h3>
+                </a>
+                <p class="hidden text-xs font-light text-gray-500 md:inline md:text-sm lg:text-[16px] lg:font-normal">
+                    Far far away, behind the word mountains, far from the countries Vokalia and Consonantia...</p>
+                <p class="text-xs md:pb-0 pt-3 md:text-sm lg:text-[15px]"><span class="text-gray-400">By</span>
+                    <a href="" class="text-[#06F] hover:underline">Dr. Mohamed Hamdy</a> <span
+                        class="text-gray-400">in</span> <a href="" class="text-[#06F] hover:underline">Neurology</a></p>
+            </div>
+        </div>
+        <div
+            class="card group flex flex-col items-center justify-center gap-x-3 rounded-2xl border-[1px] border-solid border-[#E6E6E6] bg-white hover:shadow-3.80xl md:justify-start md:rounded-3xl">
+            <!-- Image section -->
+            <a href="" class="contents">
+                <img class="h-[168px] w-full rounded-t-2xl object-cover md:h-[231px] lg:h-60"
+                    src="/assets/blog/imgs/department-icon-3.png" alt="" />
+            </a>
+            <!-- text section -->
+            <div class="w-http://127.0.0.1:5500/templates/department/department_list.htmlfull p-3 lg:p-4">
+                <p class="text-xs text-gray-500 md:pt-0 md:text-sm lg:text-[15px]">August 3, 2024</p>
+
+                <a href="">
+                    <h3 class="py-2 text-lg font-semibold group-hover:text-[#06F] md:py-3 md:text-xl lg:text-2xl">
+                        Unraveling the Brain's Mysteries: Exploring New Frontiers</h3>
+                </a>
+                <p class="hidden text-xs font-light text-gray-500 md:inline md:text-sm lg:text-[16px] lg:font-normal">
+                    Far far away, behind the word mountains, far from the countries Vokalia and Consonantia...</p>
+                <p class="text-xs md:pb-0 pt-3 md:text-sm lg:text-[15px]"><span class="text-gray-400">By</span>
+                    <a href="" class="text-[#06F] hover:underline">Dr. Mohamed Hamdy</a> <span
+                        class="text-gray-400">in</span> <a href="" class="text-[#06F] hover:underline">Neurology</a></p>
+            </div>
+        </div>
+        <div
+            class="card group flex flex-col items-center justify-center gap-x-3 rounded-2xl border-[1px] border-solid border-[#E6E6E6] bg-white hover:shadow-3.80xl md:justify-start md:rounded-3xl">
+            <!-- Image section -->
+            <a href="" class="contents">
+                <img class="h-[168px] w-full rounded-t-2xl object-cover md:h-[231px] lg:h-60"
+                    src="/assets/blog/imgs/department-icon-3.png" alt="" />
+            </a>
+            <!-- text section -->
+            <div class="w-http://127.0.0.1:5500/templates/department/department_list.htmlfull p-3 lg:p-4">
+                <p class="text-xs text-gray-500 md:pt-0 md:text-sm lg:text-[15px]">August 3, 2024</p>
+
+                <a href="">
+                    <h3 class="py-2 text-lg font-semibold group-hover:text-[#06F] md:py-3 md:text-xl lg:text-2xl">
+                        Unraveling the Brain's Mysteries: Exploring New Frontiers</h3>
+                </a>
+                <p class="hidden text-xs font-light text-gray-500 md:inline md:text-sm lg:text-[16px] lg:font-normal">
+                    Far far away, behind the word mountains, far from the countries Vokalia and Consonantia...</p>
+                <p class="text-xs md:pb-0 pt-3 md:text-sm lg:text-[15px]"><span class="text-gray-400">By</span>
+                    <a href="" class="text-[#06F] hover:underline">Dr. Mohamed Hamdy</a> <span
+                        class="text-gray-400">in</span> <a href="" class="text-[#06F] hover:underline">Neurology</a></p>
+            </div>
+        </div>
+        <div
+            class="card group flex flex-col items-center justify-center gap-x-3 rounded-2xl border-[1px] border-solid border-[#E6E6E6] bg-white hover:shadow-3.80xl md:justify-start md:rounded-3xl">
+            <!-- Image section -->
+            <a href="" class="contents">
+                <img class="h-[168px] w-full rounded-t-2xl object-cover md:h-[231px] lg:h-60"
+                    src="/assets/blog/imgs/department-icon-3.png" alt="" />
+            </a>
+            <!-- text section -->
+            <div class="w-http://127.0.0.1:5500/templates/department/department_list.htmlfull p-3 lg:p-4">
+                <p class="text-xs text-gray-500 md:pt-0 md:text-sm lg:text-[15px]">August 3, 2024</p>
+
+                <a href="">
+                    <h3 class="py-2 text-lg font-semibold group-hover:text-[#06F] md:py-3 md:text-xl lg:text-2xl">
+                        Unraveling the Brain's Mysteries: Exploring New Frontiers</h3>
+                </a>
+                <p class="hidden text-xs font-light text-gray-500 md:inline md:text-sm lg:text-[16px] lg:font-normal">
+                    Far far away, behind the word mountains, far from the countries Vokalia and Consonantia...</p>
+                <p class="text-xs md:pb-0 pt-3 md:text-sm lg:text-[15px]"><span class="text-gray-400">By</span>
+                    <a href="" class="text-[#06F] hover:underline">Dr. Mohamed Hamdy</a> <span
+                        class="text-gray-400">in</span> <a href="" class="text-[#06F] hover:underline">Neurology</a></p>
+            </div>
+        </div>
+        <div
+            class="card group flex flex-col items-center justify-center gap-x-3 rounded-2xl border-[1px] border-solid border-[#E6E6E6] bg-white hover:shadow-3.80xl md:justify-start md:rounded-3xl">
+            <!-- Image section -->
+            <a href="" class="contents">
+                <img class="h-[168px] w-full rounded-t-2xl object-cover md:h-[231px] lg:h-60"
+                    src="/assets/blog/imgs/department-icon-3.png" alt="" />
+            </a>
+            <!-- text section -->
+            <div class="w-http://127.0.0.1:5500/templates/department/department_list.htmlfull p-3 lg:p-4">
+                <p class="text-xs text-gray-500 md:pt-0 md:text-sm lg:text-[15px]">August 3, 2024</p>
+
+                <a href="">
+                    <h3 class="py-2 text-lg font-semibold group-hover:text-[#06F] md:py-3 md:text-xl lg:text-2xl">
+                        Unraveling the Brain's Mysteries: Exploring New Frontiers</h3>
+                </a>
+                <p class="hidden text-xs font-light text-gray-500 md:inline md:text-sm lg:text-[16px] lg:font-normal">
+                    Far far away, behind the word mountains, far from the countries Vokalia and Consonantia...</p>
+                <p class="text-xs md:pb-0 pt-3 md:text-sm lg:text-[15px]"><span class="text-gray-400">By</span>
+                    <a href="" class="text-[#06F] hover:underline">Dr. Mohamed Hamdy</a> <span
+                        class="text-gray-400">in</span> <a href="" class="text-[#06F] hover:underline">Neurology</a></p>
+            </div>
+        </div>
+        <div
+            class="card group flex flex-col items-center justify-center gap-x-3 rounded-2xl border-[1px] border-solid border-[#E6E6E6] bg-white hover:shadow-3.80xl md:justify-start md:rounded-3xl">
+            <!-- Image section -->
+            <a href="" class="contents">
+                <img class="h-[168px] w-full rounded-t-2xl object-cover md:h-[231px] lg:h-60"
+                    src="/assets/blog/imgs/department-icon-3.png" alt="" />
+            </a>
+            <!-- text section -->
+            <div class="w-http://127.0.0.1:5500/templates/department/department_list.htmlfull p-3 lg:p-4">
+                <p class="text-xs text-gray-500 md:pt-0 md:text-sm lg:text-[15px]">August 3, 2024</p>
+                <!-- SEE NOTES: Here if i make the text larger what will hapeened? also same for the img -->
+                <a href="">
+                    <h3 class="py-2 text-lg font-semibold group-hover:text-[#06F] md:py-3 md:text-xl lg:text-2xl">
+                        Unraveling the Brain's Mysteries: Exploring New Frontiers</h3>
+                </a>
+                <p class="hidden text-xs font-light text-gray-500 md:inline md:text-sm lg:text-[16px] lg:font-normal">
+                    Far far away, behind the word mountains, far from the countries Vokalia and Consonantia...</p>
+                <p class="text-xs md:pb-0 pt-3 md:text-sm lg:text-[15px]"><span class="text-gray-400">By</span>
+                    <a href="" class="text-[#06F] hover:underline">Dr. Mohamed Hamdy</a> <span
+                        class="text-gray-400">in</span> <a href="" class="text-[#06F] hover:underline">Neurology</a></p>
+            </div>
+        </div>
+
     </section>
     <!-- End Blog Section -->
 

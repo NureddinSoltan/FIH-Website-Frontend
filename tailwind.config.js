@@ -23,6 +23,9 @@ module.exports = {
         'xsm': { max: '350px' },
         '3xl' : '1700px',
       },
+      gridTemplateRows: {
+        auto: 'auto',
+      },
 
     },
   },
