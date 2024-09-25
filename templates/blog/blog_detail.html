@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/output.css" />
+    <!-- tailwind CDN -->
+    <!-- Robot font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet" />
+    <title>Blog Detail</title>
+</head>
+
+<body>
+    <!-- Header section -->
+    <header id="navbar"
+        class="fixed left-0 right-0 top-3 z-[100] mx-auto flex w-[96%] flex-wrap rounded-[15px] bg-white py-3 text-sm transition-transform duration-300 ease-in-out sm:flex-nowrap sm:justify-start dark:bg-neutral-800">
+        <nav class="mx-auto w-full max-w-[85rem] px-4 sm:flex sm:items-center sm:justify-between">
+            <div class="flex items-center justify-between">
+                <a class="flex-none text-xl font-semibold focus:opacity-80 focus:outline-none dark:text-white" href="#"
+                    aria-label="Brand">
+                    <img class="h-auto w-28" src="/assets/core/imgs/logo.png" alt="Logo" />
+                </a>
+                <div class="flex items-center justify-center gap-3 sm:hidden">
+                    <a class="font-medium text-gray-600 hover:text-gray-400 focus:text-gray-400 focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500"
+                        href="#">Contact Us</a>
+                    <button type="button"
+                        class="hs-collapse-toggle relative flex size-7 items-center justify-center gap-x-2 rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:bg-gray-50 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:border-neutral-700 dark:bg-transparent dark:text-white dark:hover:bg-white/10 dark:focus:bg-white/10"
+                        id="hs-navbar-example-collapse" aria-expanded="false" aria-controls="hs-navbar-example"
+                        aria-label="Toggle navigation" data-hs-collapse="#hs-navbar-example">
+                        <svg class="size-4 shrink-0 hs-collapse-open:hidden" xmlns="http://www.w3.org/2000/svg"
+                            width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="3" x2="21" y1="6" y2="6" />
+                            <line x1="3" x2="21" y1="12" y2="12" />
+                            <line x1="3" x2="21" y1="18" y2="18" />
+                        </svg>
+                        <svg class="hidden size-4 shrink-0 hs-collapse-open:block" xmlns="http://www.w3.org/2000/svg"
+                            width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 6 6 18" />
+                            <path d="m6 6 12 12" />
+                        </svg>
+                        <span class="sr-only">Toggle navigation</span>
+                    </button>
+                </div>
+            </div>
+
+            <div id="hs-navbar-example"
+                class="hs-collapse hidden grow basis-full overflow-hidden transition-all duration-300 sm:block"
+                aria-labelledby="hs-navbar-example-collapse">
+                <div class="mt-5 flex flex-col gap-5 sm:mt-0 sm:flex-row sm:items-center sm:justify-end sm:ps-5">
+                    <a class="font-medium text-blue-500 focus:outline-none" href="#" aria-current="page">Home</a>
+                    <a class="font-medium text-gray-600 hover:text-gray-400 focus:text-gray-400 focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500"
+                        href="/templates/department/department_list.html">Departments</a>
+                    <a class="font-medium text-gray-600 hover:text-gray-400 focus:text-gray-400 focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500"
+                        href="#">Doctors</a>
+                    <a class="font-medium text-gray-600 hover:text-gray-400 focus:text-gray-400 focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500"
+                        href="/templates/blog/blog_list.html">Blog</a>
+                    <!-- Drop down menu -->
+                    <div class="hs-dropdown [--adaptive:none] [--strategy:static] sm:[--strategy:fixed]">
+                        <button id="hs-navbar-example-dropdown" type="button"
+                            class="hs-dropdown-toggle flex w-full items-center font-medium text-gray-600 hover:text-gray-400 focus:text-gray-400 focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500"
+                            aria-haspopup="menu" aria-expanded="false" aria-label="Mega Menu">
+                            Other Links
+                            <svg class="ms-1 size-4 shrink-0 duration-300 hs-dropdown-open:-rotate-180 sm:hs-dropdown-open:rotate-0"
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="m6 9 6 6 6-6" />
+                            </svg>
+                        </button>
+
+                        <div class="hs-dropdown-menu top-full z-10 hidden space-y-1 rounded-lg bg-white p-1 opacity-0 transition-[opacity,margin] duration-[150ms] ease-in-out before:absolute before:-top-5 before:start-0 before:h-5 before:w-full hs-dropdown-open:opacity-100 sm:w-48 sm:border sm:shadow-md dark:divide-neutral-700 dark:border-neutral-700 dark:bg-neutral-800 sm:dark:border"
+                            role="menu" aria-orientation="vertical" aria-labelledby="hs-navbar-example-dropdown">
+                            <a class="flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-gray-800 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300"
+                                href="#"> About </a>
+                            <div
+                                class="hs-dropdown relative [--adaptive:none] [--strategy:static] sm:[--strategy:absolute]">
+                                <button id="hs-navbar-example-dropdown-sub" type="button"
+                                    class="hs-dropdown-toggle flex w-full items-center justify-between rounded-lg px-3 py-2 text-sm text-gray-800 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300">
+                                    Sub Menu
+                                    <svg class="ms-2 size-4 shrink-0 duration-300 hs-dropdown-open:-rotate-180 sm:-rotate-90 sm:hs-dropdown-open:-rotate-90"
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="m6 9 6 6 6-6" />
+                                    </svg>
+                                </button>
+
+                                <div class="hs-dropdown-menu end-full top-0 z-10 hidden rounded-lg bg-white opacity-0 transition-[opacity,margin] duration-[150ms] ease-in-out before:absolute before:-end-5 before:top-0 before:h-full before:w-5 hs-dropdown-open:opacity-100 sm:!mx-[10px] sm:mt-2 sm:w-48 sm:border sm:shadow-md dark:divide-neutral-700 dark:border-neutral-700 dark:bg-neutral-800 sm:dark:border"
+                                    role="menu" aria-orientation="vertical"
+                                    aria-labelledby="hs-navbar-example-dropdown-sub">
+                                    <div class="space-y-1 p-1">
+                                        <a class="flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-gray-800 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300"
+                                            href="#"> About </a>
+                                        <a class="flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-gray-800 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300"
+                                            href="#"> Downloads </a>
+                                        <a class="flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-gray-800 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300"
+                                            href="#"> Team Account </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-gray-800 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300"
+                                href="#"> Events </a>
+                            <a class="flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-gray-800 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300"
+                                href="#"> Testimonials </a>
+                            <a class="flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-gray-800 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300"
+                                href="#"> Patient Stories </a>
+                            <a class="flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-gray-800 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300"
+                                href="#"> Our Sponsors </a>
+                        </div>
+                    </div>
+                    <a class="font-medium text-gray-600 hover:text-gray-400 focus:text-gray-400 focus:outline-none sm:inline dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500"
+                        href="#">Contact Us</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- End of section -->
+
+    <!-- Landing section: Introduction with background image and text -->
+    <!-- BUG: Change the background to max-height in terms to handle two lines of the title -->
+    <section id="landing"
+        class="landing mx-auto m-0 flex h-[28vh] w-full items-center justify-start bg-[url('/assets/department/imgs/landing.png')] bg-cover bg-center p-0 shadow-4xl md:h-[35vh] lg:h-[47vh] xsm:h-[39vh]">
+        <div
+            class="text ml-5 lg:ml-36 md:ml-24 flex mt-20 lg:mt-32 flex-col items-start justify-center gap-4 text-center text-white lg:gap-6">
+            <h1 class="text-3xl font-bold md:text-5xl lg:text-[64px]">Health Blogs</h1>
+            <!-- SEE NOTES: here if i make the font size smaller it won't be clicky! -->
+            <!-- SEE NOTES: There's no click here in the design but I add that :) also i add color to the hover ! -->
+            <p class="text-sm text-left font-light md:text-xl md:font-normal lg:text-2xl">
+                <a href="#Home" class="hover:underline hover:text-gray-300 ">Home</a> <span> > </span> <a href="# Blog"
+                    class="hover:underline hover:text-gray-300"> Blog</a> <span> > </span> Unraveling the Brain's
+                Mysteries...
+            </p>
+        </div>
+    </section>
+    <!-- End of Landing section -->
+
+    <!-- blog_content section: View the blog detail -->
+    <section class="blog_cotnent container mx-auto px-7 mt-6">
+        <!-- SEE NOTES: for the high and width again same problem -->
+        <img class="h-full w-full rounded-lg md:rounded-xl" src="/assets/blog/imgs/department-icon-3.png" alt="">
+        <!-- text section -->
+        <div class="flex flex-col gap-[14px] md:gap-5 lg:gap-6 mt-6">
+            <!-- date -->
+            <p class="text-sm text-gray-500 md:text-xl lg:text-2xl">August 3, 2024</p>
+            <!-- title -->
+            <h3 class="text-xl font-semibold md:text-5xl lg:text-[64px] leading-normal ">Unraveling the Brain's
+                Mysteries: Exploring New Frontiers</h3>
+            <!-- author -->
+            <p class="text-sm md:text-xl lg:text-2xl"><span class="text-gray-400">By</span> <a href=""
+                    class="text-[#06F] hover:underline hover:text-[#003E9A]">Dr. Mohamed Hamdy</a> <span
+                    class="text-gray-400">in</span> <a href=""
+                    class="text-[#06F] hover:underline hover:text-[#003E9A]">Neurology</a></p>
+            <!-- content -->
+            <p class="text-justify md:text-xl lg:text-2xl">The human brain, with its intricate web of neurons and
+                synapses, is one of the most enigmatic frontiers of scientific exploration. While significant progress
+                has been made in understanding its structure and function, countless mysteries remain to be unraveled.
+                Let's embark on a journey into the lesser-known realms of the brain, where fascinating discoveries and
+                unanswered questions abound. </p>
+            <h4 class=" text-lg font-medium md:text-3xl lg:text-4xl">Neuroplasticity: The Brain's Remarkable
+                Adaptability </h4>
+            <p class="text-justify md:text-xl lg:text-2xl">One of the most intriguing aspects of the brain is its
+                ability to rewire and reshape itself in response to experience—a phenomenon known as neuroplasticity.
+                While it was once believed that the brain's structure was fixed in adulthood, research has revealed that
+                it remains malleable throughout life. This remarkable adaptability holds promise for
+                treating neurological conditions and enhancing cognitive function but raises questions about the limits
+                of neural plasticity and its implications for learning and memory. </p>
+            <h4 class=" text-lg font-medium md:text-3xl lg:text-4xl">Consciousness: The Mystery of Self-Awareness </h4>
+            <p class="text-justify md:text-xl lg:text-2xl">
+                The nature of consciousness—the subjective experience of being alive and aware—remains a perplexing
+                puzzle. What gives rise to our sense of self? How does the brain generate conscious thoughts and
+                perceptions? Despite decades of research, scientists have yet to fully unravel the neural mechanisms
+                underlying consciousness. Exploring this mystery could lead to profound insights into the nature of
+                human existence and the mind-brain relationship. </p>
+            <h4 class=" text-lg font-medium md:text-3xl lg:text-4xl">Dreams: Portals to the Unconscious Mind </h4>
+            <p class="text-justify md:text-xl lg:text-2xl">Dreams have fascinated and perplexed humans for millennia,
+                serving as windows into the unconscious mind. What purpose do dreams serve, and why do we experience
+                them? While theories abound, from memory consolidation to emotional processing, the true function of
+                dreaming remains elusive. Unravelling the mysteries of dreams could shed light on fundamental aspects of
+                cognition and consciousness. </p>
+            <h4 class=" text-lg font-medium md:text-3xl lg:text-4xl">The Brain's Final Frontier </h4>
+            <p class="text-justify md:text-xl lg:text-2xl">As we explore the brain's uncharted territories, we are
+                confronted with an endless array of mysteries and unanswered questions. From the complexities of emotion
+                and creativity to the enigma of free will, the brain continues to astound and inspire us with its
+                boundless complexity. As scientists continue to push the boundaries of knowledge, we eagerly await the
+                next breakthrough that will illuminate the darkest corners of the mind.  The mysteries of the brain
+                remind us of the boundless wonders of the human intellect. While we may never fully unlock its secrets,
+                the journey of exploration is as captivating as the destination itself. Let us continue to delve into
+                the unknown, guided by curiosity and driven by the quest for understanding. </p>
+        </div>
+    </section>
+
+    <!-- Share section -->
+    <section class="container mx-auto px-7">
+        <hr class="my-6 border-y-[0.75px] md:border-y-[1.75px]">
+        <div class="flex flex-col items-center gap-2">
+            <!-- SEE NOTES: I would like to ask in the dev mode why the frame isn't perfect can we handle this? -->
+            <!-- FIXME: Figure out the hover in the icon -->
+            <p class="text-xl font-medium md:text-2xl">Share this article via:</p>
+            <ul class="icons flex flex-row gap-x-6 lg:gap-x-8">
+                <li class="">
+                    <a href="">
+                        <!-- SEE NOTES: I make the svg size 8 instead of 30px -->
+                        <svg class="size-6 md:size-8 cursor-pointer" viewBox="0 0 23 23" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g id="Facebook - Original" clip-path="url(#clip0_392_10233)">
+                                <path class="size-32 hover:fill-[#003E9A] transition-colors duration-100" id="Vector"
+                                    d="M22.5255 11.293C22.5255 5.34312 17.7022 0.519775 11.7523 0.519775C5.80235 0.519775 0.979004 5.34312 0.979004 11.293C0.979004 16.6702 4.91861 21.1272 10.0689 21.9354V14.4072H7.33354V11.293H10.0689V8.91955C10.0689 6.2195 11.6774 4.72808 14.1382 4.72808C15.3165 4.72808 16.5497 4.93849 16.5497 4.93849V7.58972H15.1913C13.853 7.58972 13.4356 8.42023 13.4356 9.27304V11.293H16.4235L15.9458 14.4072H13.4356V21.9354C18.5859 21.1272 22.5255 16.6702 22.5255 11.293Z"
+                                    fill="#1877F2" />
+                                <path id="Vector_2"
+                                    d="M15.9458 14.4071L16.4234 11.293H13.4355V9.27299C13.4355 8.42102 13.853 7.58967 15.1912 7.58967H16.5497V4.93844C16.5497 4.93844 15.3169 4.72803 14.1381 4.72803C11.6773 4.72803 10.0689 6.21945 10.0689 8.9195V11.293H7.3335V14.4071H10.0689V21.9354C11.1843 22.1099 12.3201 22.1099 13.4355 21.9354V14.4071H15.9458Z"
+                                    fill="white" />
+                            </g>
+                        </svg>
+                    </a>
+                </li>
+
+                <li class="">
+                    <a href="">
+                        <svg class="size-6 md:size-8" viewBox="0 0 22 23" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g id="Twitter - Original" clip-path="url(#clip0_392_10234)">
+                                <path class="size-32 cursor-pointer hover:fill-[#003E9A] transition-colors duration-100"
+                                    id="Vector"
+                                    d="M7.00251 20.0468C15.1333 20.0468 19.5805 13.3105 19.5805 7.46885C19.5805 7.27752 19.5805 7.08705 19.5676 6.89744C20.4327 6.27165 21.1796 5.49681 21.7731 4.6092C20.9663 4.96688 20.1104 5.20133 19.234 5.30472C20.1569 4.75231 20.8476 3.88336 21.1775 2.85962C20.3098 3.37459 19.3604 3.73749 18.3704 3.93264C17.7039 3.22392 16.8224 2.75462 15.8623 2.59737C14.9022 2.44012 13.9171 2.60368 13.0593 3.06275C12.2015 3.52181 11.5189 4.25079 11.1172 5.13686C10.7155 6.02294 10.617 7.01672 10.8369 7.96442C9.07939 7.87626 7.36003 7.41951 5.79046 6.6238C4.22088 5.8281 2.83617 4.71124 1.7262 3.34571C1.1609 4.31889 0.987758 5.47094 1.24203 6.5673C1.4963 7.66365 2.15887 8.62187 3.09483 9.24687C2.3913 9.22626 1.70308 9.03647 1.08842 8.69356V8.74958C1.0887 9.77021 1.44201 10.7593 2.08842 11.5492C2.73484 12.339 3.63456 12.8809 4.63498 13.083C3.98417 13.2605 3.30132 13.2865 2.63891 13.1589C2.92151 14.0372 3.47149 14.8052 4.21198 15.3556C4.95248 15.9061 5.84646 16.2114 6.76895 16.2288C5.85239 16.9492 4.80279 17.4819 3.68018 17.7963C2.55757 18.1107 1.38398 18.2007 0.226562 18.0611C2.24819 19.3584 4.60044 20.0466 7.00251 20.0434"
+                                    fill="#1DA1F2" />
+                            </g>
+                        </svg>
+                    </a>
+                </li>
+
+                <li class="">
+                    <a href="">
+                        <svg class="size-6 md:size-8" viewBox="0 0 23 23" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g id="Instagram - Original" clip-path="url(#clip0_392_10235)">
+                                <path id="Vector"
+                                    class="size-32 cursor-pointer hover:fill-[#ff1151] transition-colors duration-100"
+                                    d="M11.2476 2.4598C14.1261 2.4598 14.467 2.47243 15.599 2.52293C16.6511 2.56922 17.2192 2.74597 17.598 2.89326C18.0987 3.08684 18.4607 3.32251 18.8352 3.69704C19.2139 4.07579 19.4454 4.4335 19.639 4.93429C19.7863 5.31303 19.963 5.88536 20.0093 6.93323C20.0598 8.06947 20.0724 8.41034 20.0724 11.2846C20.0724 14.1631 20.0598 14.504 20.0093 15.636C19.963 16.6881 19.7863 17.2562 19.639 17.6349C19.4454 18.1357 19.2097 18.4976 18.8352 18.8722C18.4564 19.2509 18.0987 19.4824 17.598 19.676C17.2192 19.8233 16.6469 20 15.599 20.0463C14.4628 20.0968 14.1219 20.1094 11.2476 20.1094C8.36914 20.1094 8.02827 20.0968 6.89624 20.0463C5.84416 20 5.27604 19.8233 4.89729 19.676C4.3965 19.4824 4.03459 19.2467 3.66005 18.8722C3.2813 18.4934 3.04985 18.1357 2.85626 17.6349C2.70897 17.2562 2.53223 16.6839 2.48593 15.636C2.43543 14.4998 2.42281 14.1589 2.42281 11.2846C2.42281 8.40614 2.43543 8.06526 2.48593 6.93323C2.53223 5.88115 2.70897 5.31303 2.85626 4.93429C3.04985 4.4335 3.28551 4.07158 3.66005 3.69704C4.0388 3.3183 4.3965 3.08684 4.89729 2.89326C5.27604 2.74597 5.84837 2.56922 6.89624 2.52293C8.02827 2.47243 8.36914 2.4598 11.2476 2.4598ZM11.2476 0.519775C8.32285 0.519775 7.95673 0.5324 6.80786 0.5829C5.6632 0.6334 4.87625 0.818565 4.19451 1.08369C3.4833 1.36144 2.88151 1.72756 2.28394 2.32935C1.68215 2.92692 1.31603 3.52871 1.03828 4.23571C0.773155 4.92166 0.587989 5.7044 0.53749 6.84906C0.48699 8.00214 0.474365 8.36826 0.474365 11.293C0.474365 14.2178 0.48699 14.5839 0.53749 15.7328C0.587989 16.8775 0.773155 17.6644 1.03828 18.3461C1.31603 19.0574 1.68215 19.6591 2.28394 20.2567C2.88151 20.8543 3.4833 21.2246 4.1903 21.4982C4.87625 21.7633 5.65899 21.9485 6.80365 21.999C7.95252 22.0495 8.31864 22.0621 11.2434 22.0621C14.1682 22.0621 14.5343 22.0495 15.6832 21.999C16.8278 21.9485 17.6148 21.7633 18.2965 21.4982C19.0035 21.2246 19.6053 20.8543 20.2029 20.2567C20.8005 19.6591 21.1708 19.0574 21.4443 18.3504C21.7095 17.6644 21.8946 16.8817 21.9451 15.737C21.9956 14.5881 22.0083 14.222 22.0083 11.2972C22.0083 8.37247 21.9956 8.00635 21.9451 6.85748C21.8946 5.71282 21.7095 4.92587 21.4443 4.24412C21.1792 3.52871 20.8131 2.92692 20.2113 2.32935C19.6137 1.73177 19.0119 1.36144 18.3049 1.0879C17.619 0.822773 16.8362 0.637608 15.6916 0.587108C14.5385 0.5324 14.1724 0.519775 11.2476 0.519775Z"
+                                    fill="url(#paint0_linear_392_10235)" />
+                                <path id="Vector_2"
+                                    class="size-32 cursor-pointer hover:fill-[#ff1151] transition-colors duration-100"
+                                    d="M11.2475 5.75916C8.19231 5.75916 5.71362 8.23785 5.71362 11.2931C5.71362 14.3483 8.19231 16.827 11.2475 16.827C14.3028 16.827 16.7815 14.3483 16.7815 11.2931C16.7815 8.23785 14.3028 5.75916 11.2475 5.75916ZM11.2475 14.8828C9.26543 14.8828 7.65786 13.2752 7.65786 11.2931C7.65786 9.31096 9.26543 7.70339 11.2475 7.70339C13.2297 7.70339 14.8372 9.31096 14.8372 11.2931C14.8372 13.2752 13.2297 14.8828 11.2475 14.8828Z"
+                                    fill="url(#paint1_linear_392_10235)" />
+                                <path id="Vector_3"
+                                    class="size-32 cursor-pointer hover:fill-[#ff1151] transition-colors duration-100"
+                                    d="M18.2924 5.54024C18.2924 6.25565 17.7116 6.83219 17.0004 6.83219C16.285 6.83219 15.7085 6.25145 15.7085 5.54024C15.7085 4.82483 16.2892 4.24829 17.0004 4.24829C17.7116 4.24829 18.2924 4.82904 18.2924 5.54024Z"
+                                    fill="url(#paint2_linear_392_10235)" />
+                            </g>
+                            <defs>
+                                <linearGradient id="paint0_linear_392_10235" x1="11.2413" y1="0.519775" x2="11.2413"
+                                    y2="22.0621" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#BD1CF5" />
+                                    <stop offset="0.405" stop-color="#F51C50" />
+                                    <stop offset="0.505" stop-color="#F6274B" />
+                                    <stop offset="0.675" stop-color="#F74040" />
+                                    <stop offset="0.985" stop-color="#FFD600" />
+                                </linearGradient>
+                                <linearGradient id="paint1_linear_392_10235" x1="11.2475" y1="5.75916" x2="11.2475"
+                                    y2="16.827" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#BD1CF5" />
+                                    <stop offset="0.405" stop-color="#F51C50" />
+                                    <stop offset="0.505" stop-color="#F6274B" />
+                                    <stop offset="0.675" stop-color="#F74040" />
+                                    <stop offset="0.985" stop-color="#FFD600" />
+                                </linearGradient>
+                                <linearGradient id="paint2_linear_392_10235" x1="17.0004" y1="4.24829" x2="17.0004"
+                                    y2="6.83219" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#BD1CF5" />
+                                    <stop offset="0.405" stop-color="#F51C50" />
+                                    <stop offset="0.505" stop-color="#F6274B" />
+                                    <stop offset="0.675" stop-color="#F74040" />
+                                    <stop offset="0.985" stop-color="#FFD600" />
+                                </linearGradient>
+                                <clipPath id="clip0_392_10235">
+                                    <rect width="21.5465" height="21.5465" fill="white"
+                                        transform="translate(0.474365 0.519775)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <hr class="my-6 border-y-[0.75px] md:border-y-[1.75px]">
+    </section>
+    <!-- End share section -->
+
+    <!-- Author section: brief information about the author -->
+    <section class="container mx-auto px-7">
+        <!-- SEE NOTES: I will keep the margin bottom as it's, because in larger screen it's 12 -->
+        <!-- SEE NOTES: gap isn't perfect and it's not on the font itself :( -->
+        <h1 class="text-xl font-medium mb-4 lg:text-4xl">Written by:</h1>
+        <!-- doctor image and text -->
+        <div class="flex gap-3 lg:gap-5 items-center">
+            <a class="contents" href="">
+                <img class="size-[105px] lg:size-[212px] md:size-44 rounded-md" src="/assets/doctor/imgs/doctor_1.png"
+                    alt="">
+            </a>
+            <div class="flex flex-col gap-2 justify-center place-items-start">
+                <a class="" href="">
+                    <!-- SHOULD I: add an underline here wit hover hover -->
+                    <h3
+                        class="text-xl font-medium md:text-2xl lg:text-3xl lg:font-semibold hover:text-slate-700 hover:underline">
+                        Dr. Ahmed Waled</h3>
+                </a>
+                <a href="" class="text-[#06F] hover:underline hover:text-[#003E9A]">
+                    <p class="lg:text-2xl lg:font-medium md:text-xl md:font-medium">Neurology</p>
+                </a>
+                <p class="hidden md:block md:font-normal lg:text-xl">Dr. Ahmad is a skilled neurologist with 8 years of
+                    experience in
+                    treating conditions like epilepsy, migraines, and Parkinson’s disease. He is committed to providing
+                    compassionate, patient-centered care. </p>
+                <button class="text-sm font-medium bg-[#06F] text-white py-[5px] px-2 rounded-md md:hidden">More
+                    Details</button>
+
+                <div class="gap-28 lg:gap-44 hidden md:flex">
+                    <div class="flex items-center gap-1">
+                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="Send_fill">
+                                <path id="Subtract" fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M0.298712 7.46241C0.367719 7.19546 0.577639 6.9879 0.845356 6.92191C7.5341 5.27326 14.4552 4.77874 21.3104 5.45964C21.5505 5.48349 21.7645 5.62142 21.8854 5.83025C22.0063 6.03909 22.0193 6.29334 21.9204 6.51343C19.0964 12.7966 15.2205 18.5516 10.4596 23.5302C10.269 23.7295 9.98449 23.8081 9.71864 23.735C9.4528 23.6619 9.2485 23.4488 9.18664 23.1801L7.15526 14.3563L0.514945 8.20012C0.312743 8.01266 0.229706 7.72937 0.298712 7.46241ZM8.68954 14.3347L10.332 21.4692C14.3025 17.1147 17.5989 12.1895 20.1109 6.85736C14.2358 6.37974 8.32292 6.785 2.56912 8.05907L7.93806 13.0365L13.9497 9.55693C14.3082 9.34943 14.7671 9.47183 14.9746 9.83033C15.1821 10.1888 15.0597 10.6476 14.7012 10.8551L8.68954 14.3347Z"
+                                    fill="#0066FF" />
+                            </g>
+                        </svg>
+                        <!-- SEE NOTES: I see this is a normal, but the figma give me that this is a lg?! -->
+                        <a class="lg:text-lg text-base font-medium hover:text-slate-700 hover:underline"
+                            href="mailto:ahmedwa7sh@fihosp.com">ahmedwa7sh@fihosp.com</a>
+                    </div>
+
+                    <div class="flex items-center gap-1">
+                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="Frame">
+                                <path id="Vector"
+                                    d="M2.25 7.25C2.25 15.534 8.966 22.25 17.25 22.25H19.5C20.0967 22.25 20.669 22.0129 21.091 21.591C21.5129 21.169 21.75 20.5967 21.75 20V18.628C21.75 18.112 21.399 17.662 20.898 17.537L16.475 16.431C16.035 16.321 15.573 16.486 15.302 16.848L14.332 18.141C14.05 18.517 13.563 18.683 13.122 18.521C11.4849 17.9191 9.99815 16.9686 8.76478 15.7352C7.53141 14.5018 6.58087 13.0151 5.979 11.378C5.817 10.937 5.983 10.45 6.359 10.168L7.652 9.198C8.015 8.927 8.179 8.464 8.069 8.025L6.963 3.602C6.90214 3.35869 6.76172 3.1427 6.56405 2.98834C6.36638 2.83397 6.1228 2.75008 5.872 2.75H4.5C3.90326 2.75 3.33097 2.98705 2.90901 3.40901C2.48705 3.83097 2.25 4.40326 2.25 5V7.25Z"
+                                    stroke="#0066FF" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </g>
+                        </svg>
+                        <a class="lg:text-lg text-base font-medium hover:text-slate-700 hover:underline"
+                            href="tel:+905314023112">05314023112</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="my-6 border-y-[0.75px] md:border-y-[1.75px]">
+    </section>
+    <!-- End Author section -->
+
+    <!-- Latest blogs section: include latest 3 cards that i have in my blogs -->
+    <!-- TODO: When adding footer delete the padding-bottom in this section -->
+    <section class="container mx-auto px-7 pb-7">
+        <!-- SHOULD I: add a ":" after the latest blog -->
+        <h1 class="text-xl font-medium mb-4 lg:text-4xl">Latest blog:</h1>
+        <!-- SHOULD I: add the cols-4 for the 3xl screens? -->
+        <div class="blog-card grid grid-cols-1 gap-3 md:grid-cols-3 md:grid-rows-4 md:gap-7 lg:grid-cols-3 "
+            style="grid-template-rows: auto">
+
+            <div
+                class="card group flex flex-col items-center justify-center gap-x-3 rounded-2xl border-[1px] border-solid border-[#E6E6E6] bg-white hover:shadow-3.80xl md:justify-start md:rounded-3xl">
+                <!-- Image section -->
+                <a href="" class="contents">
+                    <img class="h-[168px] w-full rounded-t-2xl object-cover md:h-[231px] lg:h-60"
+                        src="/assets/blog/imgs/department-icon-3.png" alt="" />
+                </a>
+                <!-- text section -->
+                <div class="w-http://127.0.0.1:5500/templates/department/department_list.htmlfull p-3 lg:p-4">
+                    <p class="text-xs text-gray-500 md:pt-0 md:text-sm lg:text-[15px]">August 3, 2024</p>
+                    <a href="" class=" group-hover:text-[#06F]">
+                        <h3 class="py-2 text-lg font-semibold hover:text-[#003E9A]  md:py-3 md:text-xl lg:text-2xl">
+                            Unraveling the Brain's Mysteries: Exploring New Frontiers</h3>
+                    </a>
+                    <p
+                        class="hidden text-xs font-light text-gray-500 md:inline md:text-sm lg:text-[16px] lg:font-normal">
+                        Far far away, behind the word mountains, far from the countries Vokalia and Consonantia...</p>
+                    <p class="pt-3 text-xs md:pb-0 md:text-sm lg:text-[15px]"><span class="text-gray-400">By</span> <a
+                            href="" class="text-[#06F] hover:underline hover:text-[#003E9A]">Dr. Mohamed Hamdy</a> <span
+                            class="text-gray-400">in</span> <a href=""
+                            class="text-[#06F] hover:underline hover:text-[#003E9A]">Neurology</a></p>
+                </div>
+            </div>
+            <div
+                class="card group flex flex-col items-center justify-center gap-x-3 rounded-2xl border-[1px] border-solid border-[#E6E6E6] bg-white hover:shadow-3.80xl md:justify-start md:rounded-3xl">
+                <!-- Image section -->
+                <a href="" class="contents">
+                    <img class="h-[168px] w-full rounded-t-2xl object-cover md:h-[231px] lg:h-60"
+                        src="/assets/blog/imgs/department-icon-3.png" alt="" />
+                </a>
+                <!-- text section -->
+                <div class="w-http://127.0.0.1:5500/templates/department/department_list.htmlfull p-3 lg:p-4">
+                    <p class="text-xs text-gray-500 md:pt-0 md:text-sm lg:text-[15px]">August 3, 2024</p>
+                    <a href="" class=" group-hover:text-[#06F]">
+                        <h3 class="py-2 text-lg font-semibold hover:text-[#003E9A]  md:py-3 md:text-xl lg:text-2xl">
+                            Unraveling the Brain's Mysteries: Exploring New Frontiers</h3>
+                    </a>
+                    <p
+                        class="hidden text-xs font-light text-gray-500 md:inline md:text-sm lg:text-[16px] lg:font-normal">
+                        Far far away, behind the word mountains, far from the countries Vokalia and Consonantia...</p>
+                    <p class="pt-3 text-xs md:pb-0 md:text-sm lg:text-[15px]"><span class="text-gray-400">By</span> <a
+                            href="" class="text-[#06F] hover:underline hover:text-[#003E9A]">Dr. Mohamed Hamdy</a> <span
+                            class="text-gray-400">in</span> <a href=""
+                            class="text-[#06F] hover:underline hover:text-[#003E9A]">Neurology</a></p>
+                </div>
+            </div>
+            <div
+                class="card group flex flex-col items-center justify-center gap-x-3 rounded-2xl border-[1px] border-solid border-[#E6E6E6] bg-white hover:shadow-3.80xl md:justify-start md:rounded-3xl">
+                <!-- Image section -->
+                <a href="" class="contents">
+                    <img class="h-[168px] w-full rounded-t-2xl object-cover md:h-[231px] lg:h-60"
+                        src="/assets/blog/imgs/department-icon-3.png" alt="" />
+                </a>
+                <!-- text section -->
+                <div class="w-http://127.0.0.1:5500/templates/department/department_list.htmlfull p-3 lg:p-4">
+                    <p class="text-xs text-gray-500 md:pt-0 md:text-sm lg:text-[15px]">August 3, 2024</p>
+                    <a href="" class=" group-hover:text-[#06F]">
+                        <h3 class="py-2 text-lg font-semibold hover:text-[#003E9A]  md:py-3 md:text-xl lg:text-2xl">
+                            Unraveling the Brain's Mysteries: Exploring New Frontiers</h3>
+                    </a>
+                    <p
+                        class="hidden text-xs font-light text-gray-500 md:inline md:text-sm lg:text-[16px] lg:font-normal">
+                        Far far away, behind the word mountains, far from the countries Vokalia and Consonantia...</p>
+                    <p class="pt-3 text-xs md:pb-0 md:text-sm lg:text-[15px]"><span class="text-gray-400">By</span> <a
+                            href="" class="text-[#06F] hover:underline hover:text-[#003E9A]">Dr. Mohamed Hamdy</a> <span
+                            class="text-gray-400">in</span> <a href=""
+                            class="text-[#06F] hover:underline hover:text-[#003E9A]">Neurology</a></p>
+                </div>
+            </div>
+
+        </div>
+
+
+        </div>
+        <!-- End of sections -->
+
+
+        <script src="/node_modules/preline/dist/preline.js"></script>
+        <script src="/assets/js/header.js"></script>
+</body>
+
+</html>

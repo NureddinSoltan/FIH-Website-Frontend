@@ -6,6 +6,7 @@ module.exports = {
     'node_modules/preline/dist/*.js',
   ],
   theme: {
+
     extend: {
       fontFamily: {
         sans: ['Roboto', 'sans-serif'],
