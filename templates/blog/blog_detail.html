@@ -130,8 +130,8 @@
         <div
             class="text ml-5 mt-20 flex flex-col items-start justify-center gap-4 text-center text-white md:ml-24 lg:ml-36 lg:mt-32 lg:gap-6">
             <h1 class="text-3xl font-bold md:text-5xl lg:text-[64px]">Health Blogs</h1>
-            <!-- SEE NOTES: here if i make the font size smaller it won't be clicky! -->
-            <!-- SEE NOTES: There's no click here in the design but I add that :) also i add color to the hover ! -->
+            <!-- DONE: here if i make the font size smaller it won't be clicky! -->
+            <!-- DONE: There's no click here in the design but I add that :) also i add color to the hover ! -->
             <p class="text-left text-sm font-light md:text-xl md:font-normal lg:text-2xl"><a href="#Home"
                     class="hover:text-gray-300 hover:underline">Home</a> <span> > </span> <a href="# Blog"
                     class="hover:text-gray-300 hover:underline"> Blog</a> <span> > </span> Unraveling the Brain's
@@ -142,7 +142,7 @@
 
     <!-- blog_content section: View the blog detail -->
     <section class="blog_cotnent container mx-auto mt-6 px-7">
-        <!-- SEE NOTES: for the high and width again same problem -->
+        <!-- DONE: for the high and width again same problem -->
         <img class="h-full w-full rounded-lg md:rounded-xl" src="/assets/blog/imgs/department-icon-3.png" alt="" />
         <!-- text section -->
         <div class="mt-6 flex flex-col gap-[14px] md:gap-5 lg:gap-6">
@@ -198,13 +198,13 @@
     <section class="container mx-auto px-7">
         <hr class="my-6 border-y-[0.75px] md:border-y-[1.75px]" />
         <div class="flex flex-col items-center gap-2">
-            <!-- SEE NOTES: I would like to ask in the dev mode why the frame isn't perfect can we handle this? -->
+            <!-- DONE: I would like to ask in the dev mode why the frame isn't perfect can we handle this? -->
             <!-- FIXME: Figure out the hover in the icon -->
             <p class="text-xl font-medium md:text-2xl">Share this article via:</p>
             <ul class="icons flex flex-row gap-x-6 lg:gap-x-8">
                 <li class="">
                     <a href="">
-                        <!-- SEE NOTES: I make the svg size 8 instead of 30px -->
+                        <!-- DONE: I make the svg size 8 instead of 30px -->
                         <svg class="size-6 cursor-pointer md:size-8" viewBox="0 0 23 23" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <g id="Facebook - Original" clip-path="url(#clip0_392_10233)">
@@ -292,8 +292,8 @@
 
     <!-- Author section: brief information about the author -->
     <section class="container mx-auto px-7">
-        <!-- SEE NOTES: I will keep the margin bottom as it's, because in larger screen it's 12 -->
-        <!-- SEE NOTES: gap isn't perfect and it's not on the font itself :( -->
+        <!-- DONE: I will keep the margin bottom as it's, because in larger screen it's 12 -->
+        <!-- DONE: gap isn't perfect and it's not on the font itself :( -->
         <h1 class="mb-4 text-xl font-medium lg:text-4xl">Written by:</h1>
         <!-- doctor image and text -->
         <div class="flex items-center gap-3 lg:gap-5">
@@ -303,7 +303,7 @@
             </a>
             <div class="flex flex-col place-items-start justify-center gap-2">
                 <a class="" href="">
-                    <!-- SHOULD I: add an underline here wit hover hover -->
+                    <!-- DONE: add an underline here wit hover hover -->
                     <h3
                         class="text-xl font-medium hover:text-slate-700 hover:underline md:text-2xl lg:text-3xl lg:font-semibold">
                         Dr. Ahmed Waled</h3>
@@ -314,6 +314,7 @@
                 <p class="hidden md:block md:font-normal lg:text-xl">Dr. Ahmad is a skilled neurologist with 8 years of
                     experience in treating conditions like epilepsy, migraines, and Parkinson’s disease. He is committed
                     to providing compassionate, patient-centered care.</p>
+                <!-- TODO: add hover to the button -->
                 <button class="rounded-md bg-[#06F] px-2 py-[5px] text-sm font-medium text-white md:hidden">More
                     Details</button>
 
@@ -326,7 +327,7 @@
                                     fill="#0066FF" />
                             </g>
                         </svg>
-                        <!-- SEE NOTES: I see this is a normal, but the figma give me that this is a lg?! -->
+                        <!-- DONE: I see this is a normal, but the figma give me that this is a lg?! -->
                         <a class="text-base font-medium hover:text-slate-700 hover:underline lg:text-lg"
                             href="mailto:ahmedwa7sh@fihosp.com">ahmedwa7sh@fihosp.com</a>
                     </div>
@@ -353,10 +354,10 @@
     <!-- Latest blogs section: include latest 3 cards that i have in my blogs -->
     <!-- TODO: When adding footer delete the padding-bottom in this section -->
     <section class="container mx-auto px-7 pb-7">
-        <!-- SHOULD I: add a ":" after the latest blog -->
+        <!-- DONE: add a ":" after the latest blog -->
         <h1 class="mb-4 text-xl font-medium lg:text-4xl">Latest blog:</h1>
-        <!-- SHOULD I: add the cols-4 for the 3xl screens? -->
-        <div class="blog-card grid grid-cols-1 gap-3 md:grid-cols-3 md:grid-rows-4 md:gap-7 lg:grid-cols-3"
+        <!-- TODO: add the cols-4 for the 3xl screens? -->
+        <div class="blog-card grid grid-cols-1 gap-3 md:grid-cols-3 md:grid-rows-4 md:gap-7 lg:grid-cols-3 3xl:grid-cols-4"
             style="grid-template-rows: auto">
             <div
                 class="card group flex flex-col items-center justify-center gap-x-3 rounded-2xl border-[1px] border-solid border-[#E6E6E6] bg-white hover:shadow-3.80xl md:justify-start md:rounded-3xl">
