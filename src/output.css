@@ -1381,6 +1381,35 @@ body {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#\#e0e1e4\] {
+  background-color: ##e0e1e4;
+}
+
+.bg-\[\#e0e1e4\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(224 225 228 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#f2f2f2\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(242 242 242 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#f5f5f5\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 245 245 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#f1f1f1\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(241 241 241 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#f6faff\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(246 250 255 / var(--tw-bg-opacity));
+}
+
 .bg-opacity-50 {
   --tw-bg-opacity: 0.5;
 }
@@ -1626,6 +1655,10 @@ body {
 
 .leading-normal {
   line-height: 1.5;
+}
+
+.leading-9 {
+  line-height: 2.25rem;
 }
 
 .text-\[\#003d9a\] {
@@ -1971,6 +2004,11 @@ body {
 .hover\:text-slate-700:hover {
   --tw-text-opacity: 1;
   color: rgb(51 65 85 / var(--tw-text-opacity));
+}
+
+.hover\:text-blue-500:hover {
+  --tw-text-opacity: 1;
+  color: rgb(59 130 246 / var(--tw-text-opacity));
 }
 
 .hover\:underline:hover {
@@ -2389,6 +2427,10 @@ body {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .md\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
   .md\:grid-rows-4 {
     grid-template-rows: repeat(4, minmax(0, 1fr));
   }
@@ -2423,6 +2465,14 @@ body {
 
   .md\:gap-7 {
     gap: 1.75rem;
+  }
+
+  .md\:gap-4 {
+    gap: 1rem;
+  }
+
+  .md\:gap-16 {
+    gap: 4rem;
   }
 
   .md\:gap-x-5 {
@@ -2569,6 +2619,10 @@ body {
     margin-bottom: 1rem;
   }
 
+  .lg\:block {
+    display: block;
+  }
+
   .lg\:size-\[212px\] {
     width: 212px;
     height: 212px;
@@ -2582,6 +2636,16 @@ body {
   .lg\:size-8 {
     width: 2rem;
     height: 2rem;
+  }
+
+  .lg\:size-9 {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+
+  .lg\:size-7 {
+    width: 1.75rem;
+    height: 1.75rem;
   }
 
   .lg\:h-60 {
@@ -2624,6 +2688,10 @@ body {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
   .lg\:gap-44 {
     gap: 11rem;
   }
@@ -2638,6 +2706,10 @@ body {
 
   .lg\:gap-9 {
     gap: 2.25rem;
+  }
+
+  .lg\:gap-8 {
+    gap: 2rem;
   }
 
   .lg\:gap-x-10 {
@@ -2711,6 +2783,10 @@ body {
   .lg\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .lg\:text-\[40px\] {
+    font-size: 40px;
   }
 
   .lg\:font-medium {
